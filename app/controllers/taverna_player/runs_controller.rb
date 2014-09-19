@@ -80,7 +80,7 @@ module TavernaPlayer
     private
 
     def find_workflow_and_version
-      @workflow = @run.workflow || TavernaPlayer.workflow_proxy.class_name.find(params[:workflow_id])
+      @workflow = @run.workflow || TavernaPlayer.workflow_proxy.class_const.find(params[:workflow_id])
       @workflow_version = params[:version].blank? ? @workflow.latest_version : @workflow.find_version(params[:version])
     end
 
