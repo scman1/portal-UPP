@@ -1478,6 +1478,9 @@ ActiveRecord::Schema.define(:version => 20141031154237) do
     t.boolean "can_delete"
   end
 
+  add_index "sweep_auth_lookup", ["user_id", "asset_id", "can_view"], :name => "index_sweep_auth_lookup_on_user_id_and_asset_id_and_can_view"
+  add_index "sweep_auth_lookup", ["user_id", "can_view"], :name => "index_sweep_auth_lookup_on_user_id_and_can_view"
+
   create_table "sweeps", :force => true do |t|
     t.string   "name"
     t.integer  "contributor_id"
@@ -1545,6 +1548,9 @@ ActiveRecord::Schema.define(:version => 20141031154237) do
     t.boolean "can_download"
     t.boolean "can_delete"
   end
+
+  add_index "taverna_player_run_auth_lookup", ["user_id", "asset_id", "can_view"], :name => "tav_player_run_user_asset_view_index"
+  add_index "taverna_player_run_auth_lookup", ["user_id", "can_view"], :name => "tav_player_run_user_view_index"
 
   create_table "taverna_player_run_ports", :force => true do |t|
     t.string   "name"
@@ -1755,6 +1761,9 @@ ActiveRecord::Schema.define(:version => 20141031154237) do
     t.boolean "can_download"
     t.boolean "can_delete"
   end
+
+  add_index "workflow_auth_lookup", ["user_id", "asset_id", "can_view"], :name => "index_workflow_auth_lookup_on_user_id_and_asset_id_and_can_view"
+  add_index "workflow_auth_lookup", ["user_id", "can_view"], :name => "index_workflow_auth_lookup_on_user_id_and_can_view"
 
   create_table "workflow_categories", :force => true do |t|
     t.string "name"
