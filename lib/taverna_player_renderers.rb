@@ -46,10 +46,10 @@ def format_xml(port, index = [])
 end
 
 def inline_pdf(port, index = [])
-  "If you do not see the PDF document displayed in the browser below, "\
-  "please download it (using the button above) and load it into a PDF "\
-  "reader application on your local machine.<br/>" +
-    tag(:iframe, :src => port.path(index), :class => "inline_pdf")
+  "If you do not see the PDF document displayed in the browser below, please
+    download it (using the button above) and load it into a PDF reader
+    application on your local machine.<br />" +
+    content_tag(:iframe, nil, :src => port.path(index), :class => "inline_pdf")
 end
 
 def format_error(port, index = [])
