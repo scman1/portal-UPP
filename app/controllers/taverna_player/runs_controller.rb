@@ -8,7 +8,6 @@ module TavernaPlayer
     skip_before_filter :restrict_guest_user, :only => :new
     skip_after_filter :log_event, :only => :show, :if => proc {|_| request.xhr?}
 
-    before_filter :check_project_membership_unless_embedded, :only => [:create, :new]
     before_filter :auth, :except => [ :index, :new, :create ]
     before_filter :add_sweeps, :only => :index
     before_filter :find_workflow_and_version, :only => :new
@@ -176,12 +175,5 @@ module TavernaPlayer
         end
       end
     end
-
-    def check_project_membership_unless_embedded
-      unless (params[:run] && params[:run][:embedded] == 'true') || (params[:embedded] && params[:embedded] == 'true')
-        project_membership_required
-      end
-    end
-
   end
 end

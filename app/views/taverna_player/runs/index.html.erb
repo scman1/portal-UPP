@@ -5,16 +5,16 @@
       <ul class="easytabs-nav">
           <% if logged_in? %>
             <li>Your Runs</li>
+          <% else %>
+            <li>Guest Runs</li>
           <% end %>
           <li>Other Runs</li>
       </ul>
-      <% if logged_in? %>
-        <div class="easytabs-pane" id="users-runs">
-          <%= render :partial => 'table', :locals => {:runs => @user_runs,
-                                                      :id => 'workflow_user_runs_table', :poll => false } %>
-          <%# Only one of the tables need to poll, because both will be updated with the response %>
-        </div>
-      <% end %>
+      <div class="easytabs-pane" id="users-runs">
+        <%= render :partial => 'table', :locals => {:runs => @user_runs,
+                                                    :id => 'workflow_user_runs_table', :poll => false } %>
+        <%# Only one of the tables need to poll, because both will be updated with the response %>
+      </div>
       <div class="easytabs-pane" id="other-runs">
         <%= render :partial => 'table', :locals => {:runs => @extra_runs, :polling_url => request.url,
                                                     :id => 'workflow_runs_table', :poll => @runs.any? {|r| !r.complete?},
