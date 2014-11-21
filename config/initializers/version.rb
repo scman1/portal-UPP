@@ -12,4 +12,4 @@ c = if File.exist?(git_dir) && File.directory?(git_dir)
       ""
     end
 
-$version = "1.6.0#{c}"
+$version = "1.6.1#{c}"

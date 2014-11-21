@@ -3,7 +3,8 @@ rvm:
   - 2.1.2
 before_install:
   - bundle config build.nokogiri --use-system-libraries
-script:
+before_script:
   - mv config/database.cc.yml config/database.yml
-  - RAILS_ENV=test bundle exec rake db:schema:load
+  - RAILS_ENV=test bundle exec rake db:setup
+script:
   - bundle exec rake test
