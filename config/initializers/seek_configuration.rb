@@ -123,9 +123,10 @@ SEEK::Application.configure do
   Seek::Config.fixed :main_layout,'biovel'
 
   #alternative views and partials
+  #this part uses seek_render_override
   ActionView::Renderer.define_alternative({:seek_partial=>"layouts/error_logo"},"")
   ActionView::Renderer.define_alternative({:controller=>:people,:seek_partial=>"general/items_related_to"},"")
-  ActionView::Renderer.define_alternative({:controller=>:homes,:seek_template=>:index},:index_biovel)
+  ActionView::Renderer.define_alternative({:controller=>:homes,:seek_template=>:index},:index_lvbupp)
   ActionView::Renderer.define_alternative({:seek_partial=>"people/resource_list_item"},"people/resource_list_item_biovel")
   ActionView::Renderer.define_alternative({:seek_partial=>"projects/resource_list_item"},"projects/resource_list_item_biovel")
   ActionView::Renderer.define_alternative({:seek_partial=>"assets/sharing_form"},"assets/sharing_form_biovel")

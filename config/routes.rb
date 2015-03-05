@@ -10,9 +10,10 @@ SEEK::Application.routes.draw do
 
 
   ### GENERAL PAGES ###
-
-  root :to => "homes#index"
-
+  
+  scope '(:locale)' do
+    root :to => "homes#index"
+  end #end of locale scope
   resource :admin do
     member do
       get :show

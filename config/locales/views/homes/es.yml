@@ -1,0 +1,8 @@
+es:
+  homes:
+    index:
+      welcome:   "Bienvenido al Laboratorio Virtual de Biotecnología de la UPP"
+      home:      "Inicio"
+      questions: "Preguntas"
+      news:      "Noticias"
+      contact:   "Contacto"
