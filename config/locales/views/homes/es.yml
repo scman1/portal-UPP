@@ -1,8 +1,8 @@
 es:
   homes:
-    index:
+    carousel:
       welcome:   "Bienvenido al Laboratorio Virtual de Biotecnología de la UPP"
-      home:      "Inicio"
-      questions: "Preguntas"
-      news:      "Noticias"
-      contact:   "Contacto"
+      tech_info: "Para soporte técnico y preguntas acerca del "
+      visit:     "por favor visite"
+      project:   "Proyecto LVBUPP"
+      contact:   "Página de contacto"

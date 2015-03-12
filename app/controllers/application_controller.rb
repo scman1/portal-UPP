@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   include CommonSweepers
 
   before_filter :log_extra_exception_data
+
   before_filter :set_i18n_locale_from_params
 
   after_filter :log_event
@@ -496,10 +497,10 @@ class ApplicationController < ActionController::Base
   def set_i18n_locale_from_params
     if params[:locale]
       if I18n.available_locales.include?(params[:locale].to_sym)
-        I18n.locale = params[:locale]
+        I18n.locale = params[:locale]|| I18n.default_locale
       else
         flash.now[:notice] =
-          "#{params[:locale]} translation not available"
+          "#{params[:locale]} translation not available now"
         logger.error flash.now[:notice]
       end
     end

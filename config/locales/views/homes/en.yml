@@ -1,6 +1,8 @@
 en:
-  welcome:   "Welcome to the Biotechnology Virtual Laboratory"
-  home:      "Home"
-  questions: "Questions"
-  news:      "News"
-  contact:   "Contact"
+  homes:
+    carousel:
+      contact:   "Contact page"
+      project:   "LVBUPP project"
+      tech_info: "For technical support or questions about the"
+      visit:     "please visit the"
+      welcome:   "Welcome to the Biotechnology Virtual Laboratory of the UPP"

@@ -1,0 +1,79 @@
+#The terms should be capitalized at the first character.
+en:
+  #Biosamples renaming
+  biosamples:
+    sample_parent_term: "Cultivo celular"
+    specimen_culture_starting_date: "Fecha de comienzo del cultivo"
+    sample_age: "Edad cuando se toma muestra"
+    specimen_creators: "Creadores"
+
+  #Investigation
+  investigation: "Investigación"
+
+  #Study
+  study: "Estudio"
+
+  #Assay
+  assays:
+    assay: "Ensayo"
+    experimental_assay: "Ensayo experimental"
+    modelling_analysis:  "Analisis con modelos"
+
+  #DataFile
+  data_file: "Archivo de Datos"
+
+  #Model
+  model: "Modelo"
+
+  #Sop
+  sop: "SOP"
+
+  #Presentation
+  presentation: "Presentación"
+
+  #Event
+  event: "Evento"
+
+  #Project
+  project: "Proyecto"
+
+  #Programme
+  programme: "Programa"
+
+  #Workflow
+  workflow: "Flujo de trabajo"
+
+  scale: "Escala"
+
+  menu:
+    yellow_pages: "Páginas amarillas"
+    isa:  "Detalles del experimento"
+    assets: "Recursos"
+    activities: "Actividades"
+    documentation: "Documentación"
+    admin: "Administración del servidor"
+    help: "Documentos de Ayuda"
+    account: "Cuenta"
+    faq: "Preguntas"
+    jerm_templates: "Plantillas JERM"
+    feedback: "Retroalimentación"
+    isa_best_practice: "Mejores prácticas ISA"
+
+  taverna_player/run: "Ejecución"
+
+  favourite_group: "collaboración"
+
+  access:
+    determined_by_group: "Permisos de acceso individuales para cada miembro"
+    no_access: "Sin acceso"
+    visible: "Ver resumen"
+    #the appended _downloadable allows a different message for downloadable items - e.g Workflows can be downloaded, assays cannot
+    visible_downloadable: "Ver solo resumen"
+    accessible: "Ver"
+    accessible_downloadable: "Ver y descargar"
+    editing: "Ver y editar"
+    editing_downloadable: "Ver, descargar y editar"
+    managing: "Administrar"
+
+  homes:
+    

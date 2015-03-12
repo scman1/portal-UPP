@@ -70,3 +70,5 @@ syntax: regexp
 db-dump.sql
 
 coverage/
+
+*.txt
