@@ -13,3 +13,5 @@ es:
       denied_2:  "No podra ejecutar o añadir flujos de trabajo hasta que un administrador confirme su membresia"
     biovel_footer:
       funding_1: "es patrocinado por la Universidad Metropolitana de Puebla y por CONACYT como parte del programa de apoyos para el fortalecimiento del posgrado 2015"
+      funding_2: "Este portal usa/adapta software desarrollado por los proyectos europeos: BioVeL, SEEK, Taverna como se explica en "
+      about_page: "Acerca de"
