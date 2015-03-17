@@ -11,3 +11,5 @@ es:
       register:  "Registrarse"
       denied_1:  "Su membresia no ha sido confirmada"
       denied_2:  "No podra ejecutar o añadir flujos de trabajo hasta que un administrador confirme su membresia"
+    biovel_footer:
+      funding_1: "es patrocinado por la Universidad Metropolitana de Puebla y por CONACYT como parte del programa de apoyos para el fortalecimiento del posgrado 2015"

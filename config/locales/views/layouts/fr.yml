@@ -11,4 +11,5 @@ fr:
       register:  "Enregistrer"
       denied_1:  "Votre adhésion du projet n'a pas été confirmée"
       denied_2:  "Vous ne pourrez pas exécuter ou télécharger fluxes de travail jusqu'à ce qu'un administrateur confirme votre adhésion"
-
+    biovel_footer:
+      funding_1: "est parrainé par l'Universidad Metropolitana de Puebla et CONACYT dans le cadre du programme de soutien pour renforcer le diplômé 2015"
