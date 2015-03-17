@@ -1,13 +1,14 @@
 en:
   layouts:
-    application:
+    biovel:
       title:     "Biotecnology Virtual Laboratory UPP"
       home:      "Home"
-      questions: "Questions"
-      news:      "News"
+      workflows: "Workflows"
+      runs:      "Runs"
       contact:   "Contact"
-
-
-
-
+      login:     "Log in"
+      logout:    "Log out"
+      register:  "Register"
+      denied_1:  "Your project membership has not been confirmed."
+      denied_2:  "You will be unable to run or upload workflows until an administrator confirms your membership."
 

@@ -1,0 +1,10 @@
+fr:
+  homes:
+    carousel:
+      contact:    "page de contact"
+      project:    "LVBUPP projet"
+      tech_info:  "Pour le support technique ou questions sur le"
+      visit:      "se il vous plaît visitez la"
+      welcome:    "Bienvenue dans le laboratoire virtuel de la biotechnologie UPP"
+    thematic_categorisation:
+      categories: "Types d'analyse disponibles"

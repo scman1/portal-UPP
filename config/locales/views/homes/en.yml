@@ -6,3 +6,5 @@ en:
       tech_info: "For technical support or questions about the"
       visit:     "please visit the"
       welcome:   "Welcome to the Biotechnology Virtual Laboratory of the UPP"
+    thematic_categorisation:
+      categories: "Available analysis types"

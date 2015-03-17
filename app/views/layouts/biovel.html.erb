@@ -6,8 +6,8 @@
 <head>
   <meta http-equiv="X-UA-Compatible"/>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-  <title>BioVeL Portal</title>
-  <link rel="shortcut icon" href="<%= asset_path('biovel-logo-no-text.png')%>" type="image/png"/>
+  <title>LVB UPP</title>
+  <link rel="shortcut icon" href="<%= asset_path('Logo_UPP_Posgrado_48.png')%>" type="image/png"/>
 
   <%= analytics_init if Seek::Config.google_analytics_enabled %>
   <%= csrf_meta_tag %>
@@ -30,20 +30,20 @@
 
   <div id="header" class="clearfix">
     <div>
-      <%= link_to image_tag("biovel-logo-official-small.png", :alt => "BioVeL", :title => "BioVeL", :style => "height: 50px"), "http://www.biovel.eu/", :style => "float: left", :target => '_blank' %>
+      <%= link_to image_tag("Logo_UPP_Posgrado_48.png", :alt => "LVB UPP", :title => "LVB UPP", :style => "height: 50px"), "http://www.lvbupp.edu.mx/", :style => "float: left", :target => '_blank' %>
       <ul class="biovel-menutabs clearfix">
-        <%= navigation_link 'Home', main_app.root_path, nil, controller_name == 'homes' -%>
-        <%= navigation_link 'Workflows', main_app.workflows_path, nil, controller_name == 'workflows' -%>
-        <%= navigation_link 'Runs', taverna_player.runs_path, nil, controller_name == 'runs' -%>
+        <%= navigation_link t('.home'), main_app.root_path, nil, controller_name == 'homes' -%>
+        <%= navigation_link t('.workflows'), main_app.workflows_path, nil, controller_name == 'workflows' -%>
+        <%= navigation_link t('.runs'), taverna_player.runs_path, nil, controller_name == 'runs' -%>
       </ul>
       <ul class="biovel-menutabs clearfix" style="float: right; margin-right: 20px">
-        <%= navigation_link('Contact', main_app.contact_path, nil, false) -%>
+        <%= navigation_link(t('.contact'), main_app.contact_path, nil, false) -%>
         <% if logged_in? && current_user.person && !current_user.person.new_record? %>
             <%= navigation_link current_user.person.name, main_app.person_path(current_user.person), nil, false -%>
             <%= navigation_link('Admin', main_app.admin_path, nil, false) if admin_logged_in? -%>
-            <%= navigation_link 'Log out', main_app.logout_path, nil, false -%>
+            <%= navigation_link t('.logout'), main_app.logout_path, nil, false -%>
         <% else %>
-            <li><a href="#" onclick="$('menubar-login-form').toggle();">Log in / Register</a></li>
+            <li><a href="#" onclick="$('menubar-login-form').toggle();"><%= t('.login') %> / <%= t('.register') %></a></li>
             <div id="menubar-login-form" style="display: none"><%= render :partial => "gadgets/sign_in" %></div>
         <% end %>
       </ul>
@@ -78,8 +78,8 @@
         <% end %>
         <% if logged_in? && current_user.person && current_user.person.projects.empty? %>
           <div class="box_standout curved with_smaller_shadow" style="margin: 0.8em 0.8em; line-height: 1.4;">
-            <%= image 'denied', :class => 'icon' %> Your project membership has not been confirmed.
-            You will be unable to run or upload workflows until an administrator confirms your membership.
+            <%= image 'denied', :class => 'icon' %> <%= t('.denied_1') %>.
+            <%= t('.denied_2') %>.
           </div>
         <% end %>
 

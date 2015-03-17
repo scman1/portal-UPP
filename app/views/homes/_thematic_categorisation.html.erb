@@ -1,4 +1,4 @@
-<h1>Choose an analysis...</h1>
+<h1><%= t('.categories')%></h1>
 <div style="width: <%= logged_in? ? '900px' : '770px'-%>; margin: auto; text-align: center; overflow: auto">
   <% WorkflowCategory.all.each do |category| %>
     <% if category.name != WorkflowCategory::OTHER %>

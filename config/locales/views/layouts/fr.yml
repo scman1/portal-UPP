@@ -1,0 +1,14 @@
+fr:
+  layouts:
+    biovel:
+      title:     "LVB UPP"
+      home:      "Accueil"
+      workflows: "Flux de travail"
+      runs:      "Exécutions"
+      contact:   "Contact"
+      login:     "S'identifier"
+      logout:    "Déconnecter"
+      register:  "Enregistrer"
+      denied_1:  "Votre adhésion du projet n'a pas été confirmée"
+      denied_2:  "Vous ne pourrez pas exécuter ou télécharger fluxes de travail jusqu'à ce qu'un administrateur confirme votre adhésion"
+
