@@ -6,6 +6,7 @@ fr:
       workflows: "Flux de travail"
       runs:      "Exécutions"
       contact:   "Contact"
+      about:     "Sur quoi"
       login:     "S'identifier"
       logout:    "Déconnecter"
       register:  "Enregistrer"

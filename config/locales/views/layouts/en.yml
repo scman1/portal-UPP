@@ -6,6 +6,7 @@ en:
       workflows: "Workflows"
       runs:      "Runs"
       contact:   "Contact"
+      about:     "About"
       login:     "Log in"
       logout:    "Log out"
       register:  "Register"

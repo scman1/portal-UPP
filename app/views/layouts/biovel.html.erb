@@ -37,6 +37,7 @@
         <%= navigation_link t('.runs'), taverna_player.runs_path, nil, controller_name == 'runs' -%>
       </ul>
       <ul class="biovel-menutabs clearfix" style="float: right; margin-right: 20px">
+        <%= navigation_link(t('.about'), main_app.about_path, nil, false) -%>
         <%= navigation_link(t('.contact'), main_app.contact_path, nil, false) -%>
         <% if logged_in? && current_user.person && !current_user.person.new_record? %>
             <%= navigation_link current_user.person.name, main_app.person_path(current_user.person), nil, false -%>
