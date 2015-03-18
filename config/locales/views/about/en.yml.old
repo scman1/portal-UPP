@@ -1,0 +1,26 @@
+en:
+  about:
+    index:
+      title:      "About LVB UPP"
+      goal:       "The LVB UPP allows uploading, searching, reviewing and running workflows without the need of installing or configuring additional software."
+      features:   "The main features of BioVeL Portal include:"
+      feature_1:  "Uploading your own workflows."
+      feature_2:  "Searching for workflows on my experiment."
+      feature_3:  "Reviewing workflow features."
+      feature_4:  "Running workflows."
+      feature_5:  "Downloading workflows."
+      feature_6:  "Viewing Results."
+      feature_7:  "Downloading Results."
+      feature_8:  "Experiment using your own data and share your workflows and results with the LVB community."
+      extra_info: "If you require further processing or modifications, you can download existing workflows and customise them using Taverna Workbench."
+      subtitle:   "Technologies"
+      development: "LVB UPP (re)uses open source software developed and maintained by the  the myGrid team at Manchester University as part of the BioVeL, SEEK and Apache Taverna projects."
+      seek:                  "SEEK is a storage platform designed to facilitate heterogeneous data and model storage and sharing, across multi-group scientific projects."
+      seek_link_tag:         "SEEK for science project"
+      biovel:                "BioVeL supports research on biodiversity by offering computerized tools ("workflows") to process large amounts of data from cross-disciplinary sources as well as tools for designing and running workflows"
+      biovel_link_tag:       "BioVeL project"
+      taverna:               "Apache Taverna is an open source software tool for designing and executing workflows, initially created by the myGrid project under the name Taverna Workbench, now a project under the Apache incubator."
+      taverna_link_tag:      "Apache Taverna project"
+      myexperiment:          "myExperiment is a collaborative environment where scientists can safely publish their workflows and in silico experiments, share them with groups and find those of others."
+      myexperiment_link_tag: "myExperiment project"
+

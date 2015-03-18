@@ -549,6 +549,8 @@ SEEK::Application.routes.draw do
 
     match '/contact' => 'contact#index', :as => :contact, :via => :get
 
+    match '/about' => 'about#index', :as => :about, :via => :get
+
     #error rendering
     match "/404" => "errors#error_404"
     match "/422" => "errors#error_422"
