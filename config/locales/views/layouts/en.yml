@@ -14,5 +14,4 @@ en:
       denied_2:  "You will be unable to run or upload workflows until an administrator confirms your membership."
     biovel_footer:
       funding_1: "is sponsored by Universidad Metropolitana de Puebla and CONACYT under the postgraduate strengthening programme 2015"
-      funding_2: "This portal uses/adapts software developed as part of European projects: BioVeL, SEEK, Taverna as explained in the"
-      about_page: "About page"
+      funding_2: "This portal uses/adapts software developed as part of European projects: BioVeL, SEEK, and Taverna"
