@@ -6,7 +6,7 @@ fr:
       workflows: "Flux de travail"
       runs:      "Exécutions"
       contact:   "Contact"
-      about:     "Sur quoi"
+      about:     "A propos"
       login:     "S'identifier"
       logout:    "Déconnecter"
       register:  "Enregistrer"
@@ -15,4 +15,4 @@ fr:
     biovel_footer:
       funding_1: "est parrainé par l'Universidad Metropolitana de Puebla et CONACYT dans le cadre du programme de soutien pour renforcer le diplômé 2015"
       funding_2: "Ce site utilisé/adapté logiciel développé par des projets européens : Biovel, SEEK, Taverna comme expliqué dans  "
-      about_page: "Sur quoi"
+      about_page: "A propos"

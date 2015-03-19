@@ -3,7 +3,7 @@ en:
     index:
       title:      "About LVB UPP"
       goal:       "The LVB UPP allows uploading, searching, reviewing and running workflows without the need of installing or configuring additional software."
-      features:   "The main features of BioVeL Portal include:"
+      features:   "The main features of LVB UPP include:"
       feature_1:  "Uploading your own workflows."
       feature_2:  "Searching for workflows on my experiment."
       feature_3:  "Reviewing workflow features."
@@ -11,7 +11,8 @@ en:
       feature_5:  "Downloading workflows."
       feature_6:  "Viewing Results."
       feature_7:  "Downloading Results."
-      feature_8:  "Experiment using your own data and share your workflows and results with the LVB community."
+      feature_8:  "Experiment using your own data and workflows."
+      feature_9:  "Share your data and results with the LVB community."
       extra_info: "If you require further processing or modifications, you can download existing workflows and customise them using Apache Taverna."
       subtitle:   "Technologies"
       development: "LVB UPP (re)uses open source software developed and maintained by the  the myGrid team at Manchester University as part of the BioVeL, SEEK and Apache Taverna projects."
