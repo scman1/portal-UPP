@@ -1,50 +1,50 @@
 <div id="workflow_filters">
-  <h3>Currently showing</h3>
+  <h3><%= t(".currently_showing") %></h3>
   <% if !(params.keys & ['category_id', 'uploader_id', 'query', 'visibility']).empty?  %>
     <ul>
       <% unless params[:category_id].blank? %>
         <li>
-          In category <strong><%= WorkflowCategory.find_by_id(params[:category_id]).try(:name)-%></strong>
-          <%= workflow_filter('(clear)', params, :category_id, nil) -%>
+          <%= t(".in_category") %> <strong><%= WorkflowCategory.find_by_id(params[:category_id]).try(:name)-%></strong>
+          <%= workflow_filter(t(".clear"), params, :category_id, nil) -%>
         </li>
       <% end %>
       <% unless params[:visibility].blank? %>
         <li>
         <% if params[:visibility] == 'private' %>
-          <strong>Private</strong> workflows
-          <%= workflow_filter('(clear)', params, :visibility, nil) -%>
+          <strong><%= t(".private") %> </strong> <%= t(".workflows") %> 
+          <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% elsif params[:visibility] == 'public' %>
-          <strong>Public</strong> workflows
-          <%= workflow_filter('(clear)', params, :visibility, nil) -%>
+          <strong><%= t(".public") %> </strong> <%= t(".workflows") %>
+          <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% elsif params[:visibility] == 'registered' %>
-            Only visible to <strong>registered users</strong>
-          <%= workflow_filter('(clear)', params, :visibility, nil) -%>
+            <%= t(".only_visible") %>  <strong>registered users</strong>
+          <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% elsif params[:visibility].starts_with?('Project') %>
-          Only visible to members of <strong><%= Project.find_by_id(params[:visibility].split(':').last).title-%></strong>
-          <%= workflow_filter('(clear)', params, :visibility, nil) -%>
+          <%= t(".only_visible_members") %> <strong><%= Project.find_by_id(params[:visibility].split(':').last).title-%></strong>
+          <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% end %>
         </li>
       <% end %>
       <% unless params[:uploader_id].blank? %>
         <li>
-          Uploaded by <strong><%= User.find_by_id(params[:uploader_id]).try(:person).try(:name)-%></strong>
-          <%= workflow_filter('(clear)', params, :uploader_id, nil) -%>
+          <%= t(".uploaded_by") %> <strong><%= User.find_by_id(params[:uploader_id]).try(:person).try(:name)-%></strong>
+          <%= workflow_filter(t(".clear"), params, :uploader_id, nil) -%>
         </li>
       <% end %>
       <% if params[:commit] == "Search" && !params[:query].blank?  %>
         <li>
-          Matching query: <strong><%= params[:query]-%></strong>
-          <%= workflow_filter('(clear)', params, :query, nil) -%>
+          <%= t(".matching_query") %>: <strong><%= params[:query]-%></strong>
+          <%= workflow_filter(t(".clear"), params, :query, nil) -%>
         </li>
       <% end %>
     </ul>
 
-    <%= button_to 'Clear all filters', workflows_path, :method => :get -%>
+    <%= button_to t(".clear_all"), workflows_path, :method => :get -%>
 
   <% else %>
-      All workflows
+      <%= t(".all_workflows") %>
   <% end %>
-  <h3>Filter by category</h3>
+  <h3><%= t(".filter_by_category") %></h3>
   <ul>
     <% WorkflowCategory.all.each do |category| %>
       <li><%= workflow_filter category.name, params, :category_id, category.id -%></li>
@@ -52,18 +52,18 @@
   </ul>
 
   <% if logged_in? && current_user.person %>
-    <h3>Filter by visibility</h3>
+    <h3><%= t(".filter_by_visibility") %></h3>
     <ul>
-      <li><%= workflow_filter  'Your private workflows', params, :visibility, "private" -%></li>
+      <li><%= workflow_filter  t(".private_workflows"), params, :visibility, "private" -%></li>
       <% current_user.person.projects.each do |project| %>
-        <li><%= workflow_filter  "Only visible to #{project.title} members", params, :visibility, "Project:#{project.id}" -%></li>
+        <li><%= workflow_filter " #{t('.only_visible_members')}  #{project.title}", params, :visibility, "Project:#{project.id}" -%></li>
       <% end %>
-      <li><%= workflow_filter  'Only visible to registered users', params, :visibility, "registered" -%></li>
-      <li><%= workflow_filter  "Public workflows", params, :visibility, "public" -%></li>
+      <li><%= workflow_filter  "#{t('.only_visible_users')}", params, :visibility, "registered" -%></li>
+      <li><%= workflow_filter  "#{t('.public_workflows')}", params, :visibility, "public" -%></li>
     </ul>
   <% end %>
 
-  <h3>Filter by uploader</h3>
+  <h3><%= t(".filter_by_uploader") %></h3>
   <ul>
     <% if logged_in? && current_user.person %>
       <li><%= workflow_filter  current_user.person.name, params, :uploader_id, current_user.id -%> (you)</li>

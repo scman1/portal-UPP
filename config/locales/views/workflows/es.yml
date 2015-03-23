@@ -1,0 +1,26 @@
+es:
+  workflows:
+    search:
+      search_workflows:      "Buscar flujos de trabajo"
+      search_button:         "Buscar"
+      clear_button:          "Limpiar"
+    filters:
+      currently_showing:     "Mostrando Actualmente"
+      in_category:           "Categoria"
+      clear:                 "(limpiar)"
+      private:               "Privados"
+      public:                "Publicos"
+      only_visible:          "Solo visible para"
+      only_visible_members:  "Solo visible para miembros de"
+      registered_users:      "usuarios registrados"
+      workflows:             "Flujos de trabajo"
+      uploaded_by:           "Importados por"
+      matching_query:        "Coincidentes con consulta"
+      clear_all:             "Limpiar filtros"
+      all_workflows:         "Todos los flujos de trabajo"
+      filter_by_category:    "Filtrar por categoria"
+      filter_by_visibility:  "Filtrar por visibilidad"
+      private_workflows:     "Flujos de trabajo privados"
+      only_visible_users:    "Solo visible para usuarios registrados"
+      public_workflows:      "Flujos de trabajo publicos"
+      filter_by_uploader:    "Filtrar por usuario"
