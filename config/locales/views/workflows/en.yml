@@ -43,4 +43,10 @@ en:
       manage_workflow:         "Manage workflow"
       upload_new_version:      "Upload new version"
       publish_workflow:        "Publish workflow"
+    show:
+      home:                    "Home"
+      documentation:           "Documentation"
+      view_on_myexperiment:    "View on myExperiment"
+      version:                 "Version" 
+      visibility:              "Visibility" 
 

@@ -686,7 +686,8 @@ module ApplicationHelper
   end
 
   def describe_visibility(model)
-    text = '<strong>Visibility:</strong> '
+    translate =  t(".visibility")
+    text = "<strong>#{translate}:</strong> "
 
     if model.policy.sharing_scope == 0
       css_class = 'private'

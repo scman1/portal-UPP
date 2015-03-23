@@ -1,7 +1,7 @@
 <%= javascript_include_tag "resource" %>
 
 <div class="breadcrumbs">
-  <a href="/">Home</a> &gt;
+  <a href="/"><%= t(".home")%></a> &gt;
   <%= link_to @workflow.category.name, main_app.workflows_path(:category_id => @workflow.category) -%> &gt;
   <%= @display_workflow.title -%>
 </div>
@@ -32,19 +32,19 @@
   <% end %>
 
   <% if @workflow.version > 1 %>
-      <span style="font-weight: bold;">Version: </span>
+      <span style="font-weight: bold;"> <%= t(".version") %>: </span>
       <%= resource_version_selection @workflow, @display_workflow -%>
   <% end %>
 
   <p>
     <% unless @display_workflow.documentation_link.blank? %>
       <%= link_to @display_workflow.documentation_link, :target => :blank, :class => "doc-link" do %>
-        <%= image 'help', :class => "icon", :style => "margin-right: 0.5em" %>Documentation
+        <%= image 'help', :class => "icon", :style => "margin-right: 0.5em" %><%= t(".documentation") %>
       <% end %>
     <% end %>
     <% unless @display_workflow.myexperiment_link.blank? %>
       <%= link_to @display_workflow.myexperiment_link, :target => :blank, :class => "doc-link" do %>
-        <%= image 'myexperiment', :class => "icon", :style => "margin-right: 0.5em" %>View on myExperiment
+        <%= image 'myexperiment', :class => "icon", :style => "margin-right: 0.5em" %><%= t(".view_on_myexperiment") %>
       <% end %>
     <% end %>
   </p>

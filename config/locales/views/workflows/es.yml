@@ -43,4 +43,11 @@ es:
       manage_workflow:         "Administrar flujo de trabajo"
       upload_new_version:      "Cargar nueva versión"
       publish_workflow:        "Publicar flujo de trabajo"
+    show:
+      home:                    "Inicio"
+      documentation:           "Documentación"
+      view_on_myexperiment:    "Ver en myExperiment"
+      version:                 "Versión" 
+      visibility:              "Visibilidad" 
+
 
