@@ -1,7 +1,7 @@
 <% authorization_for_showing_already_done ||= false -%>
 
 <% if collection.empty? -%>
-  <span style="font-size: 22px">No workflows found.</span>
+  <span style="font-size: 22px"><%= t(".no_workflows") %></span>
 <% else %>
     <div id="workflow_list">
     <% collection.each do |workflow| %>

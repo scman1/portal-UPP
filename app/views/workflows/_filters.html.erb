@@ -11,13 +11,13 @@
       <% unless params[:visibility].blank? %>
         <li>
         <% if params[:visibility] == 'private' %>
-          <strong><%= t(".private") %> </strong> <%= t(".workflows") %> 
+          <strong><%= t(".private") %> </strong> 
           <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% elsif params[:visibility] == 'public' %>
-          <strong><%= t(".public") %> </strong> <%= t(".workflows") %>
+          <strong><%= t(".public") %> </strong>
           <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% elsif params[:visibility] == 'registered' %>
-            <%= t(".only_visible") %>  <strong>registered users</strong>
+            <%= t(".only_visible") %>  <strong><%= t(".registered_users") %></strong>
           <%= workflow_filter(t(".clear"), params, :visibility, nil) -%>
         <% elsif params[:visibility].starts_with?('Project') %>
           <%= t(".only_visible_members") %> <strong><%= Project.find_by_id(params[:visibility].split(':').last).title-%></strong>
@@ -66,7 +66,7 @@
   <h3><%= t(".filter_by_uploader") %></h3>
   <ul>
     <% if logged_in? && current_user.person %>
-      <li><%= workflow_filter  current_user.person.name, params, :uploader_id, current_user.id -%> (you)</li>
+      <li><%= workflow_filter  current_user.person.name, params, :uploader_id, current_user.id -%> <%= t".you" %></li>
     <% end %>
     <% uploaders = User.all.select { |u| !u.person.nil? && u != current_user } %>
     <% uploaders.first(5).each do |user| %>
