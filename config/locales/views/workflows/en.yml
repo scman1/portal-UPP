@@ -35,3 +35,12 @@ en:
       workflow_contributed_by: "Workflow contributed by"
       run_workflow:            "Run workflow"
       uploaded:                "Uploaded"
+    buttons:
+      run_workflow:            "Run workflow"
+      download_workflow:       "Download workflow"
+      add_to_favorites:        "Add to favorites"
+      remove_from_favourites:  "Remove from Favourites"
+      manage_workflow:         "Manage workflow"
+      upload_new_version:      "Upload new version"
+      publish_workflow:        "Publish workflow"
+

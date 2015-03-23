@@ -35,3 +35,12 @@ es:
       workflow_contributed_by: "Flujo de trabajo aportado por"
       run_workflow:            "Ejecutar flujo de trabajo"
       uploaded:                "Cargado el"
+    buttons:
+      run_workflow:            "Ejecutar flujo de trabajo"
+      download_workflow:       "Descargar flujo de trabajo"
+      add_to_favorites:        "Agregar a favoritos"
+      remove_from_favourites:  "Remover de favoritos"
+      manage_workflow:         "Administrar flujo de trabajo"
+      upload_new_version:      "Cargar nueva versión"
+      publish_workflow:        "Publicar flujo de trabajo"
+
