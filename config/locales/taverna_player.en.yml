@@ -34,3 +34,7 @@ en:
       failed: "Failed"
     errors:
       invalid-parent: "Parents must have lower ids than their children"
+    runs:
+      index:
+        your_runs: "Your Runs"
+        other_runs: "Other Runs"

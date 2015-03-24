@@ -1,5 +1,5 @@
 #The terms should be capitalized at the first character.
-en:
+es:
   #Biosamples renaming
   biosamples:
     sample_parent_term: "Cultivo celular"
@@ -74,5 +74,3 @@ en:
     editing: "Ver y editar"
     editing_downloadable: "Ver, descargar y editar"
     managing: "Administrar"
-
-    

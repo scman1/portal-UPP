@@ -1,0 +1,40 @@
+#------------------------------------------------------------------------------
+# Copyright (c) 2014 The University of Manchester, UK.
+#
+# BSD Licenced. See LICENCE.rdoc for details.
+#
+# Taverna Player was developed in the BioVeL project, funded by the European
+# Commission 7th Framework Programme (FP7), through grant agreement
+# number 283359.
+#
+# Author: Abraham Nieva
+#------------------------------------------------------------------------------
+
+es:
+  taverna_player:
+    status:
+      pending: "En espera"
+      pre-callback: "Ejecutando tareas previas"
+      connect: "Conectandose al servidor Taverna"
+      full: "Servidor lleno, por favor espere; la ejecucion iniciara pronto"
+      initialized: "Iniciando nueva ejecución de flujo de trabajo"
+      inputs: "Cargando entradas para ejecución"
+      start: "Empezando ejecución"
+      busy: "Servidor ocupado, por favor espere; la ejecucion iniciara pronto"
+      running: "En Ejecución"
+      interact: "Esperando entradas de usuario"
+      outputs: "Collectando salidas y log de ejecución"
+      post-callback: "Ejecutando tareas posteriores a ejecución"
+      finished: "Terminado"
+      cancel: "Cancelando"
+      cancel-callback: "Ejecutando tareas posteriores a cancelación"
+      cancelled: "Cancelado"
+      timeout: "Tiempo de espera de ejecución excedido"
+      fail-callback: "Ejecutando tareas posteriores a fallo"
+      failed: "Fallo"
+    errors:
+      invalid-parent: "Antecesores deben tener identificadores menores que los sucesores"
+    runs:
+      index:
+        your_runs: "Sus Ejecuciones"
+        other_runs: "Otras Ejecuciones"
