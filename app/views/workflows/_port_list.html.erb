@@ -2,7 +2,7 @@
   <%= title -%> (<%= ports.count -%>)
 </h2>
 <% if ports.blank? -%>
-    <p class="none_text" style="margin-left:20px;">None</p>
+    <p class="none_text" style="margin-left:20px;"><%= t(".none") %></p>
 <% else %>
     <div>
       <% ports.each do |p| -%>
@@ -10,13 +10,13 @@
             <h3><%= p.name %> <%= "<span class='mime_type'>(#{p.mime_type})</span>".html_safe unless p.mime_type.blank? %></h3>
 
             <p>
-              <strong>Description:</strong>
+              <strong><%= t(".description") %>:</strong>
               <%= simple_format(p.description) %>
             </p>
 
             <% unless p.example_value.blank? %>
                 <p>
-                  <strong>Example value:</strong>
+                  <strong><%= t(".example_value") %>:</strong>
                 </p>
                 <pre class="script_example_data_box"><%= p.example_value %></pre>
             <% end %>

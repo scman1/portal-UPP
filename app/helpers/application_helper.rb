@@ -691,16 +691,16 @@ module ApplicationHelper
 
     if model.policy.sharing_scope == 0
       css_class = 'private'
-      text << "Private "
+      text << t(".private ")
       text << "with some exceptions " unless model.policy.permissions.empty?
       text << image('lock', :style => 'vertical-align: middle')
     elsif model.policy.sharing_scope == 2 && model.policy.access_type == 0
       css_class = 'group'
-      text << "Only visible to members of "
+      text << t(".only_visible_to_members")
       text << model.policy.permissions.select {|p| p.contributor_type == 'Project'}.map {|p| p.contributor.title}.to_sentence
     else
       css_class = 'public'
-      text << "Public #{image('world', :style => 'vertical-align: middle')}"
+      text << "#{t('.public')} #{image('world', :style => 'vertical-align: middle')}"
     end
 
     "<span class='visibility #{css_class}'>#{text}</span>".html_safe

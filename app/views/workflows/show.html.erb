@@ -57,26 +57,26 @@
   <!-- Inputs -->
   <div class="fold">
     <div class="foldTitle">
-      Inputs (<%= @display_workflow.input_ports.count %>)
+      <%= t(".inputs") %> (<%= @display_workflow.input_ports.count %>)
     </div>
     <div class="foldContent" style="display: none;">
       <!-- Data inputs -->
-      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.data_input_ports, :title => "Data Inputs" } -%>
+      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.data_input_ports, :title => t(".data_inputs") } -%>
       <!-- Parameter inputs -->
-      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.parameter_input_ports, :title => "Parameter Inputs" } -%>
+      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.parameter_input_ports, :title => t(".parameter_inputs") } -%>
     </div>
   </div>
 
   <!-- Outputs -->
   <div class="fold">
     <div class="foldTitle">
-      Outputs (<%= @display_workflow.output_ports.count %>)
+      <%= t(".outputs") %> (<%= @display_workflow.output_ports.count %>)
     </div>
     <div class="foldContent" style="display: none;">
       <!-- Result outputs -->
-      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.result_output_ports, :title => "Result Outputs" } -%>
+      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.result_output_ports, :title => t(".result_outputs") } -%>
       <!-- Error/log outputs -->
-      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.error_log_output_ports, :title => "Error/Log Outputs" } -%>
+      <%= render :partial => "port_list", :locals => { :ports => @display_workflow.error_log_output_ports, :title => t(".error_outputs") } -%>
     </div>
   </div>
 
@@ -84,27 +84,27 @@
   <% interactions = processors.select { |proc| proc.type == 'interaction' } || [] %>
   <div class="fold">
     <div class="foldTitle">
-      Interactions (<%= interactions.count -%>)
+      <%= t(".interactions") %> (<%= interactions.count -%>)
     </div>
     <div class="foldContent" style="display: none;">
       <% unless interactions.blank? -%>
           <table class="simple" style="width: 100%;">
+            
             <% interactions.each do |b| -%>
                 <tr>
                   <td>
                     <h3><%= b.name %></h3>
-
                     <div>
-                      <%= ('<p><strong>Description: </strong>' + (b.description || '') + '</p>').html_safe %>
-                      <%= ('<p><strong>Inputs: </strong>' + (b.inputs.blank? ? '' : b.inputs.join(", ")) + '</p>').html_safe %>
-                      <%= ('<p><strong>Outputs: </strong>' + (b.outputs.blank? ? '' : b.outputs.join(", ")) + '</p>').html_safe %>
+                      <%= ("<p><strong>#{t(".description")}: </strong>" + (b.description || '') + '</p>').html_safe %>
+                      <%= ("<p><strong>#{t(".inputs")}: </strong>" + (b.inputs.blank? ? '' : b.inputs.join(", ")) + '</p>').html_safe %>
+                      <%= ("<p><strong>#{t(".outputs")}: </strong>" + (b.outputs.blank? ? '' : b.outputs.join(", ")) + '</p>').html_safe %>
                     </div>
                   </td>
                 </tr>
             <% end %>
           </table>
       <% else %>
-          <p class="none_text">None</p>
+          <p class="none_text"><%= t(".none") %></p>
       <% end %>
     </div>
   </div>
@@ -113,7 +113,7 @@
   <% rscripts = processors.select { |proc| proc.type=='rshell' } || [] %>
   <div class="fold">
     <div class="foldTitle">
-      R Scripts (<%= rscripts.count -%>)
+      <%= t(".r_scripts") %> (<%= rscripts.count -%>)
     </div>
     <div class="foldContent" style="display: none;">
       <% unless rscripts.blank? -%>
@@ -124,9 +124,9 @@
                     <h3><%= b.name %></h3>
 
                     <div>
-                      <%= ('<p><strong>Description: </strong>' + (b.description || '') + '</p>').html_safe %>
-                      <%= ('<p><strong>Inputs: </strong>' + (b.inputs.blank? ? '' : b.inputs.join(", ")) + '</p>').html_safe %>
-                      <%= ('<p><strong>Outputs: </strong>' + (b.outputs.blank? ? '' : b.outputs.join(", ")) + '</p>').html_safe %>
+                      <%= ("<p><strong>#{t(".description")}: </strong>"  + (b.description || '') + '</p>').html_safe %>
+                      <%= ("<p><strong>#{t(".inputs")}: </strong>" + (b.inputs.blank? ? '' : b.inputs.join(", ")) + '</p>').html_safe %>
+                      <%= ("<p><strong>#{t(".outputs")}: </strong>" + (b.outputs.blank? ? '' : b.outputs.join(", ")) + '</p>').html_safe %>
                       <p><strong>Script:</strong></p>
                       <% unless b.script.blank? # should not ever be blank %>
                           <p>
@@ -139,7 +139,7 @@
             <% end %>
           </table>
       <% else %>
-          <p class="none_text">None</p>
+          <p class="none_text"><%= t(".none") %></p>
       <% end %>
     </div>
   </div>
