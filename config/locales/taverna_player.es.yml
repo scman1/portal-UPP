@@ -36,5 +36,21 @@ es:
       invalid-parent: "Antecesores deben tener identificadores menores que los sucesores"
     runs:
       index:
-        your_runs: "Sus Ejecuciones"
-        other_runs: "Otras Ejecuciones"
+        workflow_runs: "Ejecuciones de Flujos de Trabajo"
+        your_runs:     "Sus Ejecuciones"
+        guest_runs:    "Ejecuciones de invitados"
+        other_runs:    "Otras Ejecuciones"
+        showing_all:   "Mostrando todas las ejecuciones"
+        showing_75:    "Mostrando un máximo de 75 ejecuciones"
+        show_less:     "Mostrar menos"
+        show_all:      "Mostrar todo"
+      table:
+        run:           "Ejecución"
+        user:          "Usuario"
+        workflow:      "Flujo de Trabajo"
+        category:      "Categoría"
+        state:         "Estado"
+        created:       "Creado"
+        finished:      "Terminado"
+        actions:       "Acciones"
+

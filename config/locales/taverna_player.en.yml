@@ -36,5 +36,23 @@ en:
       invalid-parent: "Parents must have lower ids than their children"
     runs:
       index:
-        your_runs: "Your Runs"
-        other_runs: "Other Runs"
+        workflow_runs: "Workflow Runs"
+        your_runs:     "Your Runs"
+        guest_runs:    "Guest Runs"
+        other_runs:    "Other Runs"
+        showing_all:   "Showing all runs"
+        showing_75:    "Showing a maximum of 75 runs"
+        show_less:     "Show less"
+        show_all:      "Show all"
+      table:
+        run:           "Run"
+        user:          "User"
+        workflow:      "Workflow"
+        category:      "Category"
+        state:         "State"
+        created:       "Created"
+        finished:      "Finished"
+        actions:       "Actions"
+
+
+

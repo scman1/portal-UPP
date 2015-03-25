@@ -1,14 +1,14 @@
-<h1><%= 'Workflow Runs' -%></h1>
+<h1><%= t(".workflow_runs") %> </h1>
 
 <div class="show_basic">
   <div class="easytabs-container">
       <ul class="easytabs-nav">
           <% if logged_in? %>
-            <li><%= t(".your_runs") %> Your Runs</li>
+            <li><%= t(".your_runs") %></li>
           <% else %>
-            <li>Guest Runs</li>
+            <li><%= t(".guest_runs") %></li>
           <% end %>
-          <li>Other Runs</li>
+          <li><%= t(".other_runs") %></li>
       </ul>
       <div class="easytabs-pane" id="users-runs">
         <%= render :partial => 'table', :locals => {:runs => @user_runs,
@@ -21,11 +21,11 @@
                                                     :redirect_to => taverna_player.runs_path, :show_user => true
         } %>
         <% if params[:no_limit] %>
-            Showing all runs.
-            <%= link_to('Show less', taverna_player.runs_path(:tab => 'other')) -%>
+            <%= t(".showing_all") %>
+            <%= link_to(t(".show_less"), taverna_player.runs_path(:tab => 'other')) -%>
         <% else %>
-            Showing a maximum of 75 runs.
-            <%= link_to('Show all', taverna_player.runs_path(:tab => 'other', :no_limit => true)) -%>
+            <%= t(".showing_75") %>
+            <%= link_to(t(".show_all"), taverna_player.runs_path(:tab => 'other', :no_limit => true)) -%>
         <% end %>
 
       </div>
