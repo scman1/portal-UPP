@@ -53,6 +53,7 @@ en:
         created:       "Created"
         finished:      "Finished"
         actions:       "Actions"
+        no_runs_found: "No workflow runs found"
 
 
 

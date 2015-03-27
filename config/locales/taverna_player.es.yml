@@ -41,4 +41,4 @@ es:
         created:       "Creado"
         finished:      "Terminado"
         actions:       "Acciones"
-
+        no_runs_found: "No se encontraron ejecuciones"
