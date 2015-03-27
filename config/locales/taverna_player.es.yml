@@ -32,6 +32,9 @@ es:
         showing_75:    "Mostrando un máximo de 75 ejecuciones"
         show_less:     "Mostrar menos"
         show_all:      "Mostrar todo"
+        ago:              "atras"
+        cancel_run:       "cancelar"
+        delete_run:       "borrar"
       table:
         run:           "Ejecución"
         user:          "Usuario"
@@ -42,3 +45,17 @@ es:
         finished:      "Terminado"
         actions:       "Acciones"
         no_runs_found: "No se encontraron ejecuciones"
+      table_body:
+        ago:              "atras"
+        cancel_run:       "cancelar"
+        delete_run:       "borrar"
+      show:
+        home:             "Inicio"
+        back_to_top:      "Volver Arriba"
+      buttons:
+        manage_run:       "Administrar Ejecución"
+        cancel_run:       "Cancelar"
+        delete_run:       "Borrar"
+        report_problem:   "Reportar problemas de ejecución"
+        data_sweep:       "Crear barrido de datos usando esta ejecución"
+        download_results: "Descargar todos los resultados"

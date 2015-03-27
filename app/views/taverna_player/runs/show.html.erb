@@ -50,7 +50,7 @@
   <% workflow_version = workflow.find_version(@run.workflow_version) %>
 
   <div class="breadcrumbs">
-    <a href="/">Home</a> &gt;
+    <a href="/"><% t(".home") %></a> &gt;
     <%= link_to workflow.category.name, main_app.workflows_path(:category_id => workflow.category) -%> &gt;
     <%= link_to workflow_version.title, main_app.workflow_path(workflow, :version => workflow_version.version) -%> &gt;
     <% if @run.sweep %>
@@ -60,7 +60,7 @@
   </div>
 
   <div id="top-link-box">
-    <a href="#" id='top-link'>Back To Top </a>&nbsp;
+    <a href="#" id='top-link'><%= t(".back_to_top") %> </a>&nbsp;
     <div id='top-link-close'><%=image("destroy")%></div>
   </div>
 

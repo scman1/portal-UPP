@@ -5,7 +5,7 @@ module RunsHelper
       workflow = run.workflow
       version = run.workflow_version
       workflow_version = workflow.find_version(version)
-      created_at = "#{time_ago_in_words(run.created_at)} ago"
+      created_at = "#{time_ago_in_words(run.created_at)} #{t(".ago")}"
 
       if run.is_a?(Sweep) # If a sweep, get the latest finish time of its runs
         if run.runs.any? {|r| r.finish_time.blank? }
@@ -14,7 +14,7 @@ module RunsHelper
         else
           max_time = run.runs.map { |r| r.finish_time }.max
           finish_time = max_time.to_i
-          finish_time_text = "#{time_ago_in_words(max_time)} ago"
+          finish_time_text = "#{time_ago_in_words(max_time)} #{t(".ago")}"
         end
       else
         if run.finish_time.blank?
@@ -22,7 +22,7 @@ module RunsHelper
           finish_time_text = "-"
         else
           finish_time = run.finish_time.to_i
-          finish_time_text = "#{time_ago_in_words(run.finish_time)} ago"
+          finish_time_text = "#{time_ago_in_words(run.finish_time)} #{t(".ago")}"
         end
       end
 
@@ -52,7 +52,7 @@ module RunsHelper
                                        taverna_player.run_path(run, :redirect_to => redirect_to),
                     :method => :delete, :data => { confirm: "Are you sure?" } do
               content_tag(:span, :class => 'icon') do
-                image('destroy') + ' Delete'
+                image('destroy') + ' ' + t(".delete_run")
               end
             end
           end
@@ -64,7 +64,7 @@ module RunsHelper
                                      taverna_player.cancel_run_path(run),
                   :method => :put, :data => { confirm: "Are you sure?" } do
             content_tag(:span, :class => 'icon') do
-              image('destroy') + ' Cancel'
+              image('destroy') + ' ' + t(".cancel_run")
             end
           end
         end

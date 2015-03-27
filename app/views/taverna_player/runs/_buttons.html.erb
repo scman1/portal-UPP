@@ -3,20 +3,20 @@
 <div id="buttons">
   <ul class="sectionIcons">
     <% if @run.finished? %>
-        <li><%= render :partial => 'download_link', :locals => { :download_link_name => "Download all results", :download_url => run.results.url} %></li>
+        <li><%= render :partial => 'download_link', :locals => { :download_link_name => t(".download_results"), :download_url => run.results.url} %></li>
         <!--# If this run is part of a sweep - do not give option to create a new sweep off it.-->
         <!--# Also, if workflow does not have data input ports - there is nothing to sweep over.-->
         <% if @run.sweepable? %>
-            <li><%= image_tag_for_key('sweep', main_app.new_sweep_path(:run_id => @run.id), nil, nil, "Data sweep based on this run") -%></li>
+            <li><%= image_tag_for_key('sweep', main_app.new_sweep_path(:run_id => @run.id), nil, nil, t(".data_sweep")) -%></li>
         <% end %>
     <% end %>
     <% if @run.complete? && @run.can_manage? %>
         <% if !@run.reported? && @run.reportable? && Seek::Config.email_enabled%>
-            <li><%= image_tag_for_key('report', main_app.report_problem_run_path(@run), nil, {:method=>:post}, "Report a problem with this run") -%></li>
+            <li><%= image_tag_for_key('report', main_app.report_problem_run_path(@run), nil, {:method=>:post}, t(".report_problem")) -%></li>
         <% end %>
     <% end %>
     <% if @run.can_manage? and !current_user.guest? -%>
-        <li><%= image_tag_for_key('manage', main_app.edit_run_path(@run), nil, nil, "Manage run") -%></li>
+        <li><%= image_tag_for_key('manage', main_app.edit_run_path(@run), nil, nil, t(".manage_run") ) -%></li>
     <% end -%>
     <%= delete_or_cancel_button(@run, redirect_to) %>
   </ul>
