@@ -50,7 +50,7 @@
   <% workflow_version = workflow.find_version(@run.workflow_version) %>
 
   <div class="breadcrumbs">
-    <a href="/"><% t(".home") %></a> &gt;
+    <a href="/"><%= t(".home") %></a> &gt;
     <%= link_to workflow.category.name, main_app.workflows_path(:category_id => workflow.category) -%> &gt;
     <%= link_to workflow_version.title, main_app.workflow_path(workflow, :version => workflow_version.version) -%> &gt;
     <% if @run.sweep %>
@@ -88,7 +88,7 @@
     <div id="run-outputs" style="<%= 'display: none' unless @run.complete? && @run.outputs.size > 0-%>">
       <div class="fold">
         <div class="foldTitle">
-          Outputs
+          <%= t(".outputs") %>
         </div>
         <div class="foldContent">
           <% if @run.finished? && @run.outputs.any? %>
@@ -102,7 +102,7 @@
         <div id="run-inputs">
           <div class="fold">
             <div class="foldTitle">
-              Inputs
+              <%= t(".inputs") %>
             </div>
             <div class="foldContent">
               <%= render :partial => "inputs", :locals => {:run => @run} %>
@@ -114,7 +114,7 @@
     <div id="advanced" style="<%= 'display: none' unless @run.complete? -%>">
       <div class="fold">
         <div class="foldTitle">
-          Advanced
+          <%= t(".advanced") %>
         </div>
         <div class="foldContent" style="display: none;">
           <%= render :partial => "advanced_info", :locals => {:run => @run} %>

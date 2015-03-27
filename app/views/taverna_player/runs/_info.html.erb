@@ -2,9 +2,9 @@
   <%= form_for run, :url => main_app.run_path(run.id), :method => "put" do |f| -%>
     <p>
       <%= error_messages_for :run -%>
-      <b>Name:</b>
+      <b><%= t(".name") %>:</b>
       <%= f.text_field :name, :size => 80 -%>
-      <%= submit_tag('Save') -%>
+      <%= submit_tag(t(".save")) -%>
     </p>
   <% end %>
 
@@ -14,20 +14,20 @@
       </p>
   <% end %>
 
-  <div style="float: left; width: 300px; margin-right: 50px;">
+  <div style="float: left; width: 320px; margin-right: 50px;">
     <p>
-      <b>Workflow:</b>
+      <b><%= t(".workflow") %>:</b>
       <% workflow = run.workflow %>
       <% workflow_version = workflow.find_version(run.workflow_version) %>
 
       <%= link_to workflow_version.title, main_app.workflow_path(workflow, :version => workflow_version.version) %>
     </p>
     <p>
-      <b>Category:</b>
+      <b><%= t(".category") %>:</b>
       <%= workflow.category.name %>
     </p>
     <p>
-      <b>Status:</b>
+      <b><%= t(".state") %>:</b>
       <%= run.status_message %> <%= image_tag('ajax-loader.gif', :style => "vertical-align: middle") unless run.complete? %>
       <%= "(Report submitted)" if @run.reported? %>
     </p>
@@ -41,17 +41,17 @@
     %>
 
     <p>
-      <b>Created at:</b>
+      <b><%= t(".created") %>:</b>
       <%= created_at %>
     </p>
 
     <p>
-      <b>Started at:</b>
+      <b><%= t(".started") %>:</b>
       <%= start_time %>
     </p>
 
     <p>
-      <b>Finished at:</b>
+      <b><%= t(".finished") %>:</b>
       <%= finish_time %>
     </p>
   </div>

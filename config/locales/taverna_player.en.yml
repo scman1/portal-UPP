@@ -64,6 +64,9 @@ en:
       show:
         home:             "Home"
         back_to_top:      "Back To Top"
+        inputs:           "Inputs"
+        outputs:          "Outputs"
+        advanced:         "Advanced"
       buttons:
         manage_run:       "Manage Run"
         cancel_run:       "Cancel"
@@ -73,4 +76,19 @@ en:
         download_results: "Download all results"
         delete_run:       "Delete"
         cancel_run:       "Cancel"
+      info:
+        name:             "Name"
+        save:             "Save"
+        visibility:              "Visibility"
+        public:                  "Public"
+        private:                 "Private" 
+        only_visible_to_members: "Only visible to members of "
+        workflow:         "Workflow"
+        category:         "Category"
+        state:            "State"
+        created:          "Created"
+        finished:         "Finished"
+        started:          "Started"
 
+
+        

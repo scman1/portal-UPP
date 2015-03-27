@@ -691,7 +691,7 @@ module ApplicationHelper
 
     if model.policy.sharing_scope == 0
       css_class = 'private'
-      text << t(".private ")
+      text << t(".private")
       text << "with some exceptions " unless model.policy.permissions.empty?
       text << image('lock', :style => 'vertical-align: middle')
     elsif model.policy.sharing_scope == 2 && model.policy.access_type == 0

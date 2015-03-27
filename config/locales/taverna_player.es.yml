@@ -52,6 +52,9 @@ es:
       show:
         home:             "Inicio"
         back_to_top:      "Volver Arriba"
+        inputs:        "Entradas"
+        outputs:       "Salidas"
+        advanced:      "Avanzado"
       buttons:
         manage_run:       "Administrar Ejecución"
         cancel_run:       "Cancelar"
@@ -59,3 +62,17 @@ es:
         report_problem:   "Reportar problemas de ejecución"
         data_sweep:       "Crear barrido de datos usando esta ejecución"
         download_results: "Descargar todos los resultados"
+      info:
+        name:  "Nombre"
+        save:  "Guardar"
+        visibility:              "Visibilidad"
+        only_visible_to_members: "Solo visible para miembros de "
+        private:                 "Privada"
+        public:                  "Pública"
+        workflow:      "Flujo de Trabajo"
+        category:      "Categoría"
+        state:         "Estado"
+        created:       "Creada"
+        finished:      "Terminada"
+        started:       "Iniciada"
+
