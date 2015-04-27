@@ -17,19 +17,19 @@
   <p><%= t('.development') %></p><br>
   <ul>
     <li>
-      <strong><%= t('.myexperiment_link_tag') %>:</strong>
-      <%= t('.myexperiment') %>
+      <strong><%=  link_to t('.mygrid_link_tag'), "http://www.mygrid.org.uk", :target => '_blank' %>:</strong>
+      <%= t('.mygrid') %>
     </li>
     <li>
-      <strong><%= t('.taverna_link_tag') %>:</strong>
+      <strong><%= link_to t('.taverna_link_tag'), "http://www.taverna.org.uk", :target => '_blank'  %>:</strong>
       <%= t('.taverna') %>
     </li>
     <li>
-      <strong><%= t('.seek_link_tag') %>:</strong>
+      <strong><%= link_to t('.seek_link_tag'), "http://www.seek4science.org", :target => '_blank'   %>:</strong>
       <%= t('.seek') %>
     </li>
     <li>
-      <strong><%= t('.biovel_link_tag') %>:</strong>
+      <strong><%= link_to t('.biovel_link_tag'), "http://www.biovel.eu", :target => '_blank'   %>:</strong>
       <%= t('.biovel') %>
     </li>
   </ul>
