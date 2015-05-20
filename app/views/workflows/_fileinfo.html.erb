@@ -2,7 +2,7 @@
   <% if fileinfo.is_webpage? -%>
       <% if fileinfo.asset.can_download? %>
           <p>
-            <b>Link:</b>
+            <b><%= t('.link') %>:</b>
             <%
                link_text = fileinfo.url
                link_text = truncate(link_text,:length=>550) if fileinfo.asset.respond_to?(:content_blobs)
