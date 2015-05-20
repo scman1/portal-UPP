@@ -75,3 +75,6 @@ es:
     related_items:
       related_runs:            "Ejecuciones"
       none:                    "Ninguna"
+    fileinfo:
+      filename:                "Nombre del Archivo"
+      link:                    "Liga"

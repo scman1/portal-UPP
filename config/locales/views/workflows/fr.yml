@@ -75,3 +75,6 @@ fr:
     related_items:
       related_runs:            "Exécutions"
       none:                    "Aucun"
+    fileinfo:
+      filename:                "Nom de fichier"
+      link:                    "Nien"
