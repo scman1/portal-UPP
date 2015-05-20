@@ -11,24 +11,23 @@
     <% end %>
 
     <p>
-      <label>Category</label><br/>
+      <label><%= t('.category') %></label><br/>
       <%= f.select(:category_id, WorkflowCategory.all.collect { |c| [c.name, c.id] }) %>
     </p>
 
     <p>
-      <label>MyExperiment Link</label><br/>
+      <label><%= t('.myexperiment_link') %></label><br/>
       <%= f.text_field(:myexperiment_link) -%>
     </p>
     <p>
-      <label>Documentation Link</label><br/>
+      <label><%= t('.documentation_link') %></label><br/>
       <%= f.text_field(:documentation_link) -%>
     </p>
 
     <p style="margin: 1em 0">
       <label for="workflow_sweepable" class="enable-data-sweeps">
-        <%= help_icon("Ticking this box will allow users to run batches of runs with this workflow. "+
-                      "It may not be appropriate for all workflows to be ran in this manner, for example certain workflows with interactions.") -%>
-        Allow data sweeps?
+        <%= help_icon(t('.data_sweep_info')) -%>
+        <%= t('.allow_data_sweep') %>
         <%= f.check_box(:sweepable, :style => "vertical-align: middle") -%>
       </label>
     </p>
@@ -47,9 +46,9 @@
     <% end %>
     <p>
       <%= preview_permission_popup_link(@workflow) -%>
-      <%= submit_tag @workflow.new_record? ? "Next" : "Save Changes", :id => "workflow_submit_btn", :onclick => "javascript: validateResourceFields(true,'workflow',true); return(false);" -%>
-      or
-      <%= link_to 'Cancel', @workflow.new_record? ? workflows_path : workflow_path -%>
+      <%= submit_tag @workflow.new_record? ? t('.next') : t('.save_changes'), :id => "workflow_submit_btn", :onclick => "javascript: validateResourceFields(true,'workflow',true); return(false);" -%>
+      <%= link_to t('.or') %>
+      <%= link_to t('.cancel'), @workflow.new_record? ? workflows_path : workflow_path -%>
     </p>
   </div>
 

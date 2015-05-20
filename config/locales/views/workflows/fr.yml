@@ -64,7 +64,7 @@ fr:
       r_scripts:               "Scripts R"
       details:                 "Détails"
       filename:                "Nom du fichier"
-      category:                "Catégorie"
+      
       author:                  "Auteur"
       uploader:                "Uploader"
       uploaded_at:             "Posté au"
@@ -77,4 +77,14 @@ fr:
       none:                    "Aucun"
     fileinfo:
       filename:                "Nom de fichier"
-      link:                    "Nien"
+      link:                    "Lien"
+    form:
+      category:                "Catégorie"
+      myexperiment_link:       "Lien vers myExperiment"
+      documentation_link:      "Lien vers la Documentation"
+      allow_data_sweep:        "Permettre balayage de données"
+      data_sweep_info :        "Cochez cette case permettra aux utilisateurs d'exécuter ce flux de travail dans le lot (batch). Cela peut ne pas convenir à tous les cas, tels que les flux de travail avec des interactions."
+      cancel:                  "Annuler"
+      next:                    "Suivant"
+      save_changes:            "Enregistrer les modifications"
+      or:                      "ou"

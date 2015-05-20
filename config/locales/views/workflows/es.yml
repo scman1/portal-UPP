@@ -78,3 +78,13 @@ es:
     fileinfo:
       filename:                "Nombre del Archivo"
       link:                    "Liga"
+    form:
+      category:                "Categoría"
+      myexperiment_link:       "Liga en myExperiment"
+      documentation_link:      "Liga de Documentación"
+      allow_data_sweep:        "Permitir barrido de datos"
+      data_sweep_info:         "Marcar esta casilla permitirá a los usuarios ejecutar este flujo de trabajo en lotes (batch). Esto puede no ser apropiado para todos los casos, como por ejemplo para flujos de trabajo con interacciones."
+      cancel:                  "Cancelar"
+      next:                    "Siguiente"
+      save_changes:            "Guardar Cambios"
+      or:                      "o"

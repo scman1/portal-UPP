@@ -78,4 +78,13 @@ en:
     fileinfo:
       filename:                "Filename"
       link:                    "Link"
-
+    form:
+      category:                "Category"
+      myexperiment_link:       "myExperiment Link"
+      documentation_link:      "Documentation Link"
+      allow_data_sweep:        "Allow data sweeps"
+      data_sweep_info:         "Ticking this box will allow users to run batches of runs with this workflow. It may not be appropriate for all workflows to be ran in this manner, for example certain workflows with interactions."
+      cancel:                  "Cancel"
+      next:                    "Next"
+      save_changes:            "Save changes"
+      or:                      "or"
