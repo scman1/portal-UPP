@@ -89,3 +89,13 @@ en:
       next:                    "Next"
       save_changes:            "Save changes"
       or:                      "or"
+    port_type_table:
+      port_types_table_info:   "Specify the input and output types of the workflow."
+      input_output_types:      "Input and Output Types"
+      port_types_info_text_1:  "Please specify the purpose of each workflow input and output port, and the type that they accept or produce."
+      port_types_info_text_2:  "Specifying the type of a port will help BioVeL Portal display workflow results and input data in an appropriate way." 
+      wf_inputs:               "Inputs"
+      wf_outputs:              "Outputs"
+      wf_pt_type:              "Type"
+
+

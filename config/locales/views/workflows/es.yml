@@ -89,3 +89,12 @@ es:
       next:                    "Siguiente"
       save_changes:            "Guardar Cambios"
       or:                      "o"
+    port_type_table:
+      port_types_table_info:   "Especifique los tipos de entrada y salida del flujo de trabajo."
+      input_output_types:      "Tipos de Entrada y Salida"
+      port_types_info_text_1:  "Por favor, especifique el tipo de datos de cada uno de los puertos de entrada y salida."
+      port_types_info_text_2:  "Especificar el tipo de puerto ayuda a requerir entradas y mostrar  los resultados de manera apropiada." 
+      wf_inputs:               "Entradas"
+      wf_outputs:              "Salidas"
+      wf_pt_type:              "Tipo"
+
