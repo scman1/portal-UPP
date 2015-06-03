@@ -37,9 +37,10 @@ en:
       uploaded:                "Uploaded"
     buttons:
       run_workflow:            "Run workflow"
+      run_sweep:               "Run data sweep"
       download_workflow:       "Download workflow"
       add_to_favorites:        "Add to favorites"
-      remove_from_favourites:  "Remove from Favourites"
+      remove_from_favorites:   "Remove from favorites"
       manage_workflow:         "Manage workflow"
       upload_new_version:      "Upload new version"
       publish_workflow:        "Publish workflow"

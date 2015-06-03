@@ -37,9 +37,10 @@ fr:
       uploaded:                "Téléchargé"
     buttons:
       run_workflow:            "Exécuter flux de travail"
+      run_sweep:               "Exécuter balayage de données"
       download_workflow:       "Télécharger flux de travail"
       add_to_favorites:        "Ajouter aux favoris"
-      remove_from_favourites:  "Retirer de favoris"
+      remove_from_favorites:   "Retirer de favoris"
       manage_workflow:         "Gérer flux de travail"
       upload_new_version:      "Ajouter nouvelle version"
       publish_workflow:        "Publier flux de travail"
