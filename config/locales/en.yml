@@ -35,7 +35,8 @@ en:
   event: "Event"
 
   #Project
-  project: "Project"
+  project:  "Project"
+  projects: "Projects"
 
   #Programme
   programme: "Programme"
@@ -44,7 +45,14 @@ en:
   workflow: "Workflow"
 
   scale: "Scale"
-
+  
+  # Helper translations
+  multyselect_info:    "Here you can associate the %{object_text} with specific %{relation}."
+  multyselect_intro:   "The following %{relation_text} are associated with this %{object_text}:"
+  multyselect_button:  "Associate with this %{object_text}"
+  multyselect_default: "Select %{relation_text} ..."
+  
+  
   menu:
     yellow_pages: "Yellow pages"
     isa:  "Experiment details"
@@ -74,3 +82,15 @@ en:
     editing: "View and edit"
     editing_downloadable: "View, download and edit"
     managing: "Manage"
+
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+      project:
+        one: Project
+        other: Projects
+      workflow:
+        one: Workflow
+        other: Workflows

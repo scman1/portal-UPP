@@ -86,12 +86,15 @@ module FancyMultiselectHelper
       with_new_link = options[:with_new_link] || false
       object_type_text = options[:object_type_text]
       object_type_text = (I18n.t 'biosamples.sample_parent_term').capitalize if object_type_text == 'Specimen'
+      # added translations and passed them as parameters to the actual helper translation strings below
+      object_type_text = I18n.t(object_type_text.parameterize.underscore.to_sym)
+      association_text = " " + I18n.t(association) 
 
       #set default values for locals being sent to the partial
       #override default values with options passed in to the method
-      options.reverse_merge! :intro => "The following #{association.to_s.singularize.humanize.pluralize.downcase} are associated with this #{object_type_text.downcase}:",
-                             :button_text => "Associate with this #{object_type_text}",
-                             :default_choice_text => "Select #{association.to_s.singularize.humanize} ...",
+      options.reverse_merge! :intro => I18n.t('multyselect_intro', object_text: object_type_text.downcase, relation_text: association_text.downcase),
+                             :button_text => I18n.t('multyselect_button', object_text: object_type_text.downcase),
+                             :default_choice_text => I18n.t('multyselect_default', relation_text: association_text.downcase),
                              :name => "#{options[:object_class].name.underscore}[#{association.to_s.singularize}_ids]",
                              :possibilities => [],
                              :value_method => :id,
@@ -127,7 +130,9 @@ module FancyMultiselectHelper
       hidden = options.delete(:hidden)
       object_type_text = options[:object_type_text] || options[:object_class].name.underscore.humanize
       object_type_text = (I18n.t 'biosamples.sample_parent_term') if object_type_text == 'Specimen'
-      title = (help_icon("Here you can associate the #{object_type_text} with specific #{association.to_s.singularize.humanize.pluralize}.") + " #{association.to_s.singularize.humanize.pluralize}") + (options[:required] ? ' <span class="required">*</span>'.html_safe : '')
+      object_type_text = I18n.t(object_type_text.parameterize.underscore.to_sym).downcase
+      asociation_text = " " + I18n.t(association).downcase 
+      title = (help_icon(I18n.t('multyselect_info', object_text: object_type_text, relation: asociation_text)) + asociation_text) + (options[:required] ? ' <span class="required">*</span>'.html_safe : '')
 
       folding_box "add_#{association}_form", title , :hidden => hidden, :contents => super(object, association, options)
     end
