@@ -46,7 +46,7 @@
               <%= t('.no_gatekeeper', resource_type: @resource_type.downcase) %>
             </li>
             <li style="margin-left: 2em">
-              <%= t('.with_gatekeeper') %>
+              <%= t('.with_gatekeeper', resource_type: @resource_type.downcase) %>
             </li>
           <% end %>
           <% if !disable_advanced_view%>
