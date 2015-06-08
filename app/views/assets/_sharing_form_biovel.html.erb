@@ -162,9 +162,9 @@
             <div class="fold" style="width: 70%; margin: 0.6em 0;">
 
               <div class="foldTitle">
-                <%= image_tag icon_filename_for_key("spinner"), :id => "f_group_deleting_spinner", :alt=>"loading...", :title=>"loading...", :style => "display: none; vertical-align: middle; float: right;" -%>
-                <%= help_icon("Here you can choose your #{t('favourite_group').pluralize} to share this #{@resource_type} with.") -%>
-                <%= t('favourite_group').capitalize.pluralize -%>
+                <%= image_tag icon_filename_for_key("spinner"), :id => "f_group_deleting_spinner", :alt=>t('.fold_loading'), :title=>t('.fold_loading'), :style => "display: none; vertical-align: middle; float: right;" -%>
+                <%= help_icon(t('.fold_info', favourite_group: t('favourite_group').pluralize, resource_type: @resource_type)) -%>
+                <%= t('favourite_group').capitalize -%>
               </div>
 
               <div class="foldContent" style="display: none; background-color: #F2F2F2;">
@@ -174,13 +174,13 @@
 
                   <%= select_tag "favourite_group_select", f_group_select_options, :style => "width: 82%; vertical-align: middle; margin-right: 0.4em;", :disabled => (favourite_groups.blank?) -%>
 
-                  <%= link_to "Add", "", :id => "add_f_group_link", :style => "font-weight: bold; vertical-align: middle;", :disabled => (favourite_groups.blank?),
+                  <%= link_to t('.add'), "", :id => "add_f_group_link", :style => "font-weight: bold; vertical-align: middle;", :disabled => (favourite_groups.blank?),
                               :onclick => "javascript: if($('favourite_group_select').disabled) return(false); addContributor('FavouriteGroup', $('favourite_group_select').options[$('favourite_group_select').selectedIndex].text, parseInt($('favourite_group_select').options[$('favourite_group_select').selectedIndex].value), #{Policy::DETERMINED_BY_GROUP}); return(false);" -%>
                 </p>
                 <ul style="text-align: left; margin: 1em 0 0.5em 3.2em;">
                   <li id="edit_f_group_li" style="display: <%= favourite_groups.blank? ? "none" : "block" -%>; list-style-type: disc; padding: 0;"><%= favourite_group_popup_link_action_edit(@resource.class.name) -%></li>
                   <li id="delete_f_group_li" style="display: <%= favourite_groups.blank? ? "none" : "block" -%>; list-style-type: disc; padding: 0;">
-                    <%= link_to "Delete selected #{t('favourite_group').pluralize}", main_app.delete_favourite_group_path(0), :onclick => "deleteSelectedFavouriteGroup(); return(false);" -%>
+                    <%= link_to t('delete_selected', favourite_group: t('favourite_group').pluralize), main_app.delete_favourite_group_path(0), :onclick => "deleteSelectedFavouriteGroup(); return(false);" -%>
                   </li>
                   <li id="create_f_group_li" style="list-style-type: disc; padding: 0.5em 0 0 0;"><%= favourite_group_popup_link_action_new(@resource.class.name) -%></li>
 
@@ -193,21 +193,21 @@
             <div class="fold" style="width: 70%; margin: 0.6em 0;">
 
               <div class="foldTitle">
-                <%= help_icon("Here you can choose #{t('project').pluralize}, institutions and workgroups to share this #{@resource_type} with.") -%>
-                <%= t('project').pluralize %> and Institutions
+                <%= help_icon(t('.fold_2_info', project: t('project').pluralize, resource_type: @resource_type)) -%>
+                <%= t('.fold_2_title', project: t('project').pluralize ) %>
               </div>
 
               <div class="foldContent" style="display: none; background-color: #F2F2F2; padding-bottom: 1.3em;">
                 <p style="margin: 0.6em 0; padding: 0; line-height: 1; font-weight: bold; text-align: center;">
                   <% right_arrow_image = icon_filename_for_key("arrow_right") -%>
 
-                  <span class="note_text" id="proj_select_step_1">Step 1</span>
+                  <span class="note_text" id="proj_select_step_1"><%= t('.step_1')-%></span>
                   <%= image_tag right_arrow_image, :style => "vertical-align: middle; padding: 0 0.8em;" -%>
 
-                  <span class="note_text_disabled" id="proj_select_step_2">Step 2</span>
+                  <span class="note_text_disabled" id="proj_select_step_2"><%= t('.step_2')-%></span>
                   <%= image_tag right_arrow_image, :style => "vertical-align: middle; padding: 0 0.8em;" -%>
 
-                  <span class="note_text_disabled" id="proj_select_step_3">Step 3</span>
+                  <span class="note_text_disabled" id="proj_select_step_3"><%= t('.step_3')-%></span>
                 </p>
 
                 <center>
@@ -216,24 +216,22 @@
 
                     <!-- step 1 -->
                     <div id="proj_select_step_div_1" style="display: block; margin: 0; padding: 0;">
-                      <%= image_tag icon_filename_for_key("spinner"), :id => "institutions_loading_spinner", :alt=>"loading...", :title=>"loading...", :style => "display: none; vertical-align: middle; float: right;" -%>
-                      <span class="note_text" style="line-height: 1.5;">Step 1:</span> Select a <%= t('project') %>
+                      <%= image_tag icon_filename_for_key("spinner"), :id => "institutions_loading_spinner", :alt=>t('.fold_loading'), :title=>t('.fold_loading'), :style => "display: none; vertical-align: middle; float: right;" -%>
+                      <span class="note_text" style="line-height: 1.5;"><%= t('.step_1')-%>:</span> <%= t('.step_1_text', project: t('project')) %> 
                       <%= select("proj_project", "select",
                                  Project.all.collect { |p| [p.title, p.id] },
-                                 {:include_blank => "All #{t('project').pluralize} @ Institution (from Step 2)"}, {:style => "width: 100%; vertical-align: middle; margin: 0.3em 0;"}) -%>
+                                 {:include_blank => t('.step_1_all', project: t('project'))}, {:style => "width: 100%; vertical-align: middle; margin: 0.3em 0;"}) -%>
                     </div>
 
                     <!-- step 2 -->
                     <div id="proj_select_step_div_2" style="display: none; margin: 0; padding: 0;">
-                      <span class="note_text" style="line-height: 1.5;">Step 2:</span> Select scope of the <%= t('project') %>
+                      <span class="note_text" style="line-height: 1.5;"><%= t('.step_2')-%>:</span> <%= t('.step_2_text', project: t('project')) %>
                       <%= select_tag("proj_institution_select", nil, {:style => "width: 100%; vertical-align: middle; margin: 0.3em 0;"}) -%>
                     </div>
 
                     <!-- step 3 -->
                     <div id="proj_select_step_div_3" style="display: none; margin: 0; padding: 0;">
-                      <span class="note_text" style="line-height: 1.5;">Step 3:</span> Choose access rights, review and
-                      submit
-
+                      <span class="note_text" style="line-height: 1.5;"><%= t('.step_3')-%>:</span> <%= t('.step_3_text') %>
                       <select name="proj_access_type_select" id="proj_access_type_select" onchange="javascript: replaceReviewWorkGroupURL();" style="width: 100%; vertical-align: middle; margin: 0.3em 0;">
                         <%= policy_selection_options [Policy::NO_ACCESS, Policy::ACCESSIBLE, Policy::EDITING, Policy::MANAGING], @resource -%>
                       </select>
@@ -242,16 +240,16 @@
 
                     <p style="margin: 0; padding: 0.3em 0 0 0; line-height: 1; font-weight: bold; text-align: right;">
                       <span id="proj_select_prev_link" style="display: none; float: left;">
-                        <%= link_to "< Previous step", "", :onclick => "javascript: projectInstitutionStepAction(-1); return(false);", :style => "font-weight: bold;" -%>
+                        <%= link_to t('.prev_step'), "", :onclick => "javascript: projectInstitutionStepAction(-1); return(false);", :style => "font-weight: bold;" -%>
                       </span>
                       <span id="proj_select_next_link" style="display: inline; float: right;">
-                        <%= link_to "Next step >", "", :onclick => "javascript: projectInstitutionStepAction(1); return(false);", :style => "font-weight: bold;" -%>
+                        <%= link_to t('.next_step'), "", :onclick => "javascript: projectInstitutionStepAction(1); return(false);", :style => "font-weight: bold;" -%>
                       </span>
 
                     <div id="proj_select_add_link" style="display: none; float: right;">
                       <ul style="margin-left: 1.2em; text-align: left;">
                         <li style="list-style-type: disc; padding: 0.3em 0;">
-                          <%= link_to "Add immediately", "", :onclick => "javascript: addProjectInstitution(); return(false);", :style => "font-weight: bold; padding: 0;" -%>
+                          <%= link_to t('.add_now'), "", :onclick => "javascript: addProjectInstitution(); return(false);", :style => "font-weight: bold; padding: 0;" -%>
                         </li>
                         <li style="list-style-type: disc; padding: 0;">
                           <div id="work_group_parent_span"><%= workgroup_member_review_popup_link(@resource.class.name) -%></div>

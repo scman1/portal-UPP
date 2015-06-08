@@ -52,6 +52,7 @@ es:
   multyselect_intro: "Los siguientes %{relation_text} estan asociados a este %{object_text}:"
   multyselect_button:  "Asociar con este %{object_text}"
   multyselect_default: "Seleccionar %{relation_text} ..."
+  review_members_html: "<b>Revisar miembros, definir permisos individuales<br/>antes de agregar</b>"
   
   menu:
     yellow_pages: "Páginas amarillas"
@@ -69,7 +70,7 @@ es:
 
   taverna_player/run: "Ejecución"
 
-  favourite_group: "collaboración"
+  favourite_group:  "colaboración"
 
   access:
     determined_by_group: "Permisos de acceso individuales para cada miembro"

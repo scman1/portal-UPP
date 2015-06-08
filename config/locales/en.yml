@@ -51,7 +51,7 @@ en:
   multyselect_intro:   "The following %{relation_text} are associated with this %{object_text}:"
   multyselect_button:  "Associate with this %{object_text}"
   multyselect_default: "Select %{relation_text} ..."
-  
+  review_members_html: "<b>Review members, set individual<br/>permissions and add afterwards</b>"
   
   menu:
     yellow_pages: "Yellow pages"
