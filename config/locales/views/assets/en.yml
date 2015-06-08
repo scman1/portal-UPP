@@ -40,3 +40,7 @@ en:
       next_step:          "Next step >"
       prev_step:          "< Previous step"
       add_now:            "Add immediately"
+      fold_3_info:        "Here you can specify individual people to share this %{resource_type} with."
+      fold_3_title:       "Individual people"
+      fold_3_text:        "Please type names of people to share this %{resource_type} with into the box below - suggestions will be displayed as you type. Select access rights from drop-down menu; these will be applied to all chosen people. Clicking \"Add\" will add selected people to the list."
+
