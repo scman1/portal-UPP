@@ -1,10 +1,11 @@
 en:
   homes:
     carousel:
-      contact:   "Contact page"
-      project:   "LVBUPP project"
-      tech_info: "For technical support or questions about the"
-      visit:     "please visit the"
-      welcome:   "Welcome to the Biotechnology Virtual Laboratory of the UPP"
+      contact:       "Contact page"
+      project:       "LVBUPP project"
+      tech_info:     "For technical support or questions about the"
+      visit:         "please visit the"
+      welcome:       "Welcome to the Biotechnology Virtual Laboratory of the UPP"
+      photo_credit:  "Photo by %{photo_author}"
     thematic_categorisation:
       categories: "Available analysis types"

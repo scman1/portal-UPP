@@ -244,7 +244,12 @@ class WorkflowsController < ApplicationController
 
   # Checks if the uploaded file looks like a Taverna workflow
   def taverna_workflow?(file)
+    
     first_couple_of_bytes = IO.read(file, 512) # returns string
+    Rails.logger.info("#####################################")
+    Rails.logger.info("Checking if file is a workflow")
+    Rails.logger.info("this is the first bytes of it #{first_couple_of_bytes}")
+
     if first_couple_of_bytes.include?('xmlns="http://taverna.sf.net/2008/xml/t2flow"') # This looks like a Taverna workflow
       return true
     else
@@ -253,11 +258,18 @@ class WorkflowsController < ApplicationController
   end
 
   def extract_workflow_metadata
+    Rails.logger.info("#####################################")
+    Rails.logger.info("Extracting metadata")
+    Rails.logger.info("#####################################")
+    Rails.logger.info("BLOB CONTENTS:")
+    Rails.logger.info(@workflow.content_blob.data_io_object.read)
     @t2flow = T2Flow::Parser.new.parse(@workflow.content_blob.data_io_object.read)
-
+    
     @workflow.title = @t2flow.annotations.titles.last unless @t2flow.annotations.titles.last.blank?
+   
     @workflow.description = @t2flow.annotations.descriptions.last
-
+    
+    
     @t2flow.sources.each do |source|
       unless @workflow.input_ports.detect { |i| i.name == source.name && i.workflow_version == @workflow.version }
         @workflow.input_ports.build(:name => source.name,

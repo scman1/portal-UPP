@@ -219,6 +219,8 @@ module AssetsCommonExtension
   end
 
   def create_content_blobs
+    Rails.logger.info("#####################################")
+    Rails.logger.info("Checking if content blob is created")
     asset = eval "@#{self.controller_name.downcase.singularize}"
     sym = self.controller_name.downcase.singularize.to_sym
     version = asset.version

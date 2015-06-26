@@ -1,10 +1,11 @@
 es:
   homes:
     carousel:
-      contact:    "Página de contacto"
-      project:    "Proyecto LVBUPP"
-      tech_info:  "Para soporte técnico y preguntas acerca del "
-      visit:      "por favor visite"
-      welcome:    "Bienvenido al Laboratorio Virtual de Biotecnología de la UPP"
+      contact:       "Página de contacto"
+      project:       "Proyecto LVBUPP"
+      tech_info:     "Para soporte técnico y preguntas acerca del "
+      visit:         "por favor visite"
+      welcome:       "Bienvenido al Laboratorio Virtual de Biotecnología de la UPP"
+      photo_credit:  "Foto tomada por %{photo_author}"
     thematic_categorisation:
       categories: "Tipos de análisis disponibles"
