@@ -11,7 +11,7 @@ en:
       feature_5:  "Downloading workflows."
       feature_6:  "Viewing Results."
       feature_7:  "Downloading Results."
-      feature_8:  "Experiment using your own data and workflows."
+      feature_8:  "Experiment using your own data."
       feature_9:  "Share your data and results with the LVB community."
       extra_info: "If you require further processing or modifications, you can download existing workflows and customise them using Apache Taverna."
       subtitle:   "Technologies"
