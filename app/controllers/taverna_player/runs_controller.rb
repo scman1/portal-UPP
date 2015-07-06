@@ -37,7 +37,7 @@ module TavernaPlayer
       @run.policy.set_attributes_with_sharing params[:sharing], @run.projects
 
       if @run.save
-        flash[:notice] = "Run was successfully created."
+        flash[:notice] = t('new_run_flash')
       end
 
       respond_with(@run, :status => :created, :location => @run)

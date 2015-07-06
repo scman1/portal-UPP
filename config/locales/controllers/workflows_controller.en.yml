@@ -1,0 +1,3 @@
+en:
+  uploaded_new: "%{wf} was successfully uploaded and saved."
+  updated_new: "%{wf} was successfully updated"

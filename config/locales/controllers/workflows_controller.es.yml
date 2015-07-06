@@ -1,0 +1,3 @@
+es:
+  uploaded_new: "El %{wf} ha sido subido y almacenado."
+  updated_new: "El %{wf} ha sido actualizado"

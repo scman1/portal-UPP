@@ -94,4 +94,4 @@ es:
       input_form:
         input_info_html:  "Un valor de ejemplo ha sido agregado en la siguiente caja de texto.<br/>Puede proporcionar datos editando el contenido o elegir un archivo con los datos requeridos."
         or_file:          "o seleccione un archivo..."
-
+  new_run_flash:    "Ejecución creada exitosamente."

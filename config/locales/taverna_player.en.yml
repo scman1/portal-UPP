@@ -108,4 +108,4 @@ en:
       input_form:
         input_info_html:  "The example value is automatically entered in the box below.<br/>Click to edit and enter a new value directly or choose a file."
         or_file:          "Or select a file..."
-
+  new_run_flash:    "Run was successfully created."

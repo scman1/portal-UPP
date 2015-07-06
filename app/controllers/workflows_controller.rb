@@ -90,7 +90,7 @@ class WorkflowsController < ApplicationController
         #Add creators
         AssetsCreator.add_or_update_creator_list(@workflow, params[:creators])
         respond_to do |format|
-          flash[:notice] = "#{t('workflow')} was successfully uploaded and saved." if flash.now[:notice].nil?
+          flash[:notice] = "#{t('uploaded_new', wf: t('workflow'))}" if flash.now[:notice].nil?
           format.html { redirect_to describe_ports_workflow_path(@workflow) }
         end
       else
@@ -136,7 +136,7 @@ class WorkflowsController < ApplicationController
       AssetsCreator.add_or_update_creator_list(@workflow, params[:creators])
 
       respond_to do |format|
-        flash[:notice] = "#{t('workflow')} was successfully updated." if flash.now[:notice].nil?
+        flash[:notice] = "#{t('updated_new', wf: t('workflow'))}" if flash.now[:notice].nil?
         format.html { redirect_to workflow_path(@workflow) }
       end
     else
