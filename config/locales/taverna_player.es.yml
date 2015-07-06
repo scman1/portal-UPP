@@ -75,4 +75,23 @@ es:
         created:       "Creada"
         finished:      "Terminada"
         started:       "Iniciada"
+      new:
+        home_tag:         "Inicio"
+        new_tag:          "Nueva Ejecución"
+        run_name:         "Nombre de la Ejecución:"
+        new_wfr_tag:      "Nueva Ejecución del workflow: "
+        guest_tag:        "Usuarios no registrados"
+        guest_inf1_html:  "Esta iniciando esta ejecución como <strong>Usuario no registrado</strong>. Los resultados de esta ejecución serán visibles para otros usuarios, y serán accessibles solamente por siete días a partir de la fecha en que concluya la ejecución y después sera borrado."
+        guest_inf2_html:  "Si desea mantener los resultados por mas tiempo por favor "
+        guest_inf3_html:  " antes de empezar una ejecución. If you do not have an account yet you can "
+        login:            "log in"
+        signup:           "sign up"
+        run_name:         "Nobre de la ejecución:"
+        data:             "Datos"
+        parameters:       "Parametros"
+        start_run:        "Ejecutar"
+        cancel:           "Cancelar"
+      input_form:
+        input_info_html:  "Un valor de ejemplo ha sido agregado en la siguiente caja de texto.<br/>Puede proporcionar datos editando el contenido o elegir un archivo con los datos requeridos."
+        or_file:          "o seleccione un archivo..."
 

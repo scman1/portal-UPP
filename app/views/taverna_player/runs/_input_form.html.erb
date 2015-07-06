@@ -16,8 +16,7 @@
       <% unless input[:example_value].blank? %>
         <% unless input_data.try(:value) %>
           <p>
-            The example value is automatically entered in the box below.
-            Click to edit or enter a new value directly or choose a file.
+            <%= t('.input_info_html')%> 
           </p>
         <% end %>
       <% end %>
@@ -26,7 +25,7 @@
         <%= input_fields.text_area :value, :value => input_data.try(:value) || input[:example_value], :rows => 3, :cols => 50, :placeholder => "Enter input here..." %>
       </div>
       <div class="file_input">
-        Or select a file...<br/>
+        <%= t('.or_file')%><br/>
         <%= input_fields.file_field :file %>
       </div>
       <div style="clear:both"></div>

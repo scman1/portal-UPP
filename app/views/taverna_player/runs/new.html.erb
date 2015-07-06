@@ -1,24 +1,22 @@
 <div class="breadcrumbs">
-  <a href="/">Home</a> &gt;
+  <a href="/"><%= t('.home_tag')%></a> &gt;
   <%= link_to @workflow.category.name, main_app.workflows_path(:category_id => @workflow.category) -%> &gt;
   <%= link_to @workflow_version.title, main_app.workflow_path(@workflow, :version => @workflow_version.version) -%> &gt;
-  New Run
+  <%= t('.new_tag')%>
 </div>
 
 <div class="contribution_title">
-  <h1><%= 'New Workflow Run: ' + @workflow_version.title -%></h1>
+  <h1><%= t('.new_wfr_tag') + @workflow_version.title -%></h1>
 </div>
 
 <% if current_user.guest? %>
     <div class="box_infotext curved" style="margin: 1em auto">
-      <h5>Guest Users</h5>
-      <p>
-        You are starting this workflow run as a <strong>Guest user</strong>.
-        The results of this run will be publicly visible by other guests, and will only be accessible for seven days after it finishes, at which point they will be deleted.
+      <h5><%= t('.guest_tag')%></h5>
+      <p> 
+        <%= t('.guest_inf1_html')%>
       </p>
-      <p>
-        If you wish to keep the results for longer than that please <%= link_to 'log in', main_app.new_session_path -%> before starting a run.
-        If you do not have an account yet you can <%= link_to 'sign up', main_app.signup_path -%>.
+      <p> 
+        <%= t('.guest_inf2_html')%> <%= link_to t('.login'), main_app.new_session_path -%> <%= t('.guest_inf3_html')%> <%= link_to 'sign up', main_app.signup_path -%>.
       </p>
     </div>
 <% end %>
@@ -33,26 +31,26 @@
       <%= f.hidden_field :embedded %>
 
       <div class="box_about_actor" style="text-align: left; padding: 20px 20px 20px 0px;">
-        <%= f.label :name, "Run name:"  %><br/>
+        <%= f.label :name, t('.run_name')  %><br/>
         <%= f.text_field :name, :value => "#{@workflow_version.title} (v#{@workflow_version.version}) run " + Time.now.utc.strftime('%e %b %Y %H:%M:%S %Z'), :style => 'width: 100%' %>
       </div>
 
       <!-- Data inputs -->
       <% unless @workflow_version.data_input_ports.blank? %>
-          <%= render :partial => 'inputs_form', :locals => {:title => "Data", :inputs => @workflow_version.data_input_ports, :form => f} %>
+          <%= render :partial => 'inputs_form', :locals => {:title => t('.data'), :inputs => @workflow_version.data_input_ports, :form => f} %>
       <% end %>
 
       <!-- Parameter inputs -->
       <% unless @workflow_version.parameter_input_ports.blank? %>
-          <%= render :partial => 'inputs_form', :locals => {:title => "Parameters", :inputs => @workflow_version.parameter_input_ports, :form => f} %>
+          <%= render :partial => 'inputs_form', :locals => {:title => t('.parameters'), :inputs => @workflow_version.parameter_input_ports, :form => f} %>
       <% end %>
       <br/>
 
       <div style="float: left;">
-        <%= f.submit 'Start Run' %>
+        <%= f.submit t('.start_run') %>
         <% unless @run.embedded? %>
               <span style="padding-left: 10px;">
-                 <%= link_to 'Cancel', :back %>
+                 <%= link_to t('.cancel'), :back %>
               </span>
         <% end %>
       </div>

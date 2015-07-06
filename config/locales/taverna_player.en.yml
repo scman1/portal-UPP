@@ -89,6 +89,23 @@ en:
         created:          "Created"
         finished:         "Finished"
         started:          "Started"
+      new:
+        home_tag:         "Home"
+        new_tag:          "New Run"
+        run_name:         "Run name:"
+        new_wfr_tag:      "New Workflow Run: "
+        guest_tag:        "Guest Users"
+        guest_inf1_html:  "You are starting this workflow run as a <strong>Guest user</strong>. The results of this run will be publicly visible by other guests, and will only be accessible for seven days after it finishes, at which point they will be deleted."
+        guest_inf2_html:  "If you wish to keep the results for longer than that please "
+        guest_inf3_html:  " before starting a run. If you do not have an account yet you can "
+        login:            "log in"
+        signup:           "sign up"
+        run_name:         "Run name:"
+        data:             "Data"
+        parameters:       "Parameters"
+        start_run:        "Start Run"
+        cancel:           "Cancel"
+      input_form:
+        input_info_html:  "The example value is automatically entered in the box below.<br/>Click to edit and enter a new value directly or choose a file."
+        or_file:          "Or select a file..."
 
-
-        
