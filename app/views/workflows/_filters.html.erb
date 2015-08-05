@@ -47,7 +47,12 @@
   <h3><%= t(".filter_by_category") %></h3>
   <ul>
     <% WorkflowCategory.all.each do |category| %>
-      <li><%= workflow_filter category.name, params, :category_id, category.id -%></li>
+      <% visible_workflow_count = Workflow.where(:category_id => category.id).select {|w| w.can_view?}.count %>
+      <% if logged_in? %>
+         <li><%= workflow_filter category.name, params, :category_id, category.id -%></li>
+      <% elsif visible_workflow_count > 0 %>
+        <li><%= workflow_filter category.name, params, :category_id, category.id -%></li>
+      <% end %>
     <% end %>
   </ul>
 
@@ -62,23 +67,24 @@
       <li><%= workflow_filter  "#{t('.public_workflows')}", params, :visibility, "public" -%></li>
     </ul>
   <% end %>
-
+  <% if logged_in? %>
   <h3><%= t(".filter_by_uploader") %></h3>
-  <ul>
-    <% if logged_in? && current_user.person %>
-      <li><%= workflow_filter  current_user.person.name, params, :uploader_id, current_user.id -%> <%= t".you" %></li>
-    <% end %>
-    <% uploaders = User.all.select { |u| !u.person.nil? && u != current_user } %>
-    <% uploaders.first(5).each do |user| %>
-      <li><%= workflow_filter  user.person.name, params, :uploader_id, user.id -%></li>
-    <% end %>
-  </ul>
-  <% if uploaders.count > 5 %>
-    <ul id="uploader-list-expanded" style="display: none">
-      <% uploaders.drop(5).each do |user| %>
+    <ul>
+      <% if logged_in? && current_user.person %>
+        <li><%= workflow_filter  current_user.person.name, params, :uploader_id, current_user.id -%> <%= t".you" %></li>
+      <% end %>
+      <% uploaders = User.all.select { |u| !u.person.nil? && u != current_user } %>
+      <% uploaders.first(5).each do |user| %>
         <li><%= workflow_filter  user.person.name, params, :uploader_id, user.id -%></li>
       <% end %>
     </ul>
-    <a href="#" onclick="$('uploader-list-expanded').show(); $(this).hide(); return false" style="margin-left: 1em">Show all users</a>
+    <% if uploaders.count > 5 %>
+      <ul id="uploader-list-expanded" style="display: none">
+        <% uploaders.drop(5).each do |user| %>
+          <li><%= workflow_filter  user.person.name, params, :uploader_id, user.id -%></li>
+        <% end %>
+      </ul>
+      <a href="#" onclick="$('uploader-list-expanded').show(); $(this).hide(); return false" style="margin-left: 1em">Show all users</a>
+    <% end %>
   <% end %>
 </div>
