@@ -10,7 +10,7 @@
           <br/>
           <%= category.name %>
         <% end %>
-      <% else %>
+      <% elsif logged_in? %>
         <div class="workflow-category no-workflows" title="No workflows in this category">
           <%= image_tag "category_logos/#{category.name.underscore.gsub(' ','_')}.png", :size => '80x80', :alt => category.name %>
           <br/>
