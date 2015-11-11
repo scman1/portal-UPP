@@ -113,3 +113,5 @@ end
 group :assets do
   gem 'yui-compressor'
 end
+
+gem 'globalize', '~> 3.1.0'

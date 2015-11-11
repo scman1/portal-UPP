@@ -72,3 +72,5 @@ db-dump.sql
 coverage/
 
 *.txt
+.bundle/
+

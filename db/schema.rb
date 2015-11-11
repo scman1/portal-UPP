@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141031154237) do
+ActiveRecord::Schema.define(:version => 20151111181406) do
 
   create_table "activity_logs", :force => true do |t|
     t.string   "action"
@@ -1768,6 +1768,17 @@ ActiveRecord::Schema.define(:version => 20141031154237) do
   create_table "workflow_categories", :force => true do |t|
     t.string "name"
   end
+
+  create_table "workflow_category_translations", :force => true do |t|
+    t.integer  "workflow_category_id"
+    t.string   "locale",               :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "name"
+  end
+
+  add_index "workflow_category_translations", ["locale"], :name => "index_workflow_category_translations_on_locale"
+  add_index "workflow_category_translations", ["workflow_category_id"], :name => "index_workflow_category_translations_on_workflow_category_id"
 
   create_table "workflow_input_port_types", :force => true do |t|
     t.string "name"
