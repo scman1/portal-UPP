@@ -6,5 +6,6 @@ class WorkflowCategory < ActiveRecord::Base
   POPULATION_MODELLING = 'Population Modelling'
   ECOSYSTEM_MODELLING = 'Ecosystem Modelling'
   OTHER = 'Other'
+
   translates :name
 end
