@@ -73,4 +73,7 @@ coverage/
 
 *.txt
 .bundle/
+gem_graph_old.png
+gem_graph.png
+
 

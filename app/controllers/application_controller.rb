@@ -430,7 +430,7 @@ class ApplicationController < ActionController::Base
 
   def permitted_filters
     #placed this in a separate method so that other controllers could override it if necessary
-    Seek::Util.persistent_classes.select {|c| c.respond_to? :find_by_id}.map {|c| c.name.underscore}
+    Seek::Util.persistent_classes.select {|c| c.respond_to? :find_by_id if c.name!="Globalize::ActiveRecord::Translation"}.map {|c| c.name.underscore}
   end
 
   def apply_filters(resources)
