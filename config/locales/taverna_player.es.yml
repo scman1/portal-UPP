@@ -45,6 +45,10 @@ es:
         finished:      "Terminado"
         actions:       "Acciones"
         no_runs_found: "No se encontraron ejecuciones"
+        last:           "Final"
+        first:          "Primero"
+        next:           "Siguiente"
+        previous:       "Anterior"
       table_body:
         ago:              "atras"
         cancel_run:       "cancelar"

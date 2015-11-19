@@ -16,7 +16,7 @@
         workflow_runs_table = $j('#<%= id -%>').dataTable({
             "sPaginationType": "full_numbers",
             "iDisplayLength" : 15,
-//            "bPaginate":false,
+            //"bPaginate":false,
             "bLengthChange":false,
             "bFilter":true,
             "bSort":true,
@@ -24,7 +24,13 @@
             "bAutoWidth":false,
             "bRetrieve":true,
             "oLanguage": {
-                "sEmptyTable": "<%= t(".no_runs_found") -%>"
+                "sEmptyTable": "<%= t(".no_runs_found") -%>",
+                "oPaginate": {
+                  "sLast": "<%= t(".last") -%>",
+                  "sNext": "<%= t(".next") -%>",
+                  "sPrevious": "<%= t(".previous") -%>",
+                  "sFirst": "<%= t(".first") -%>"
+                }
             },
             "aaSorting":[
                 [ <%= default_sort[0] -%>, "<%= default_sort[1] -%>" ]
@@ -45,7 +51,7 @@
                 { "iDataSort": 8, "sWidth":"10%", "bSearchable": false },
                 { "bSearchable": false, "bVisible": false }, //Unix timestamp of "finished" date for sorting purposes
                 { "sWidth":"6%", "bSortable":false, "bSearchable": false }
-            ]
+            ],
         });
         <% if poll %>
           $j('#<%= id -%>').data('poller', window.setInterval(function () { $j.get("<%= polling_url.html_safe %>", null, null, "script") }, <%= poll_interval -%>));

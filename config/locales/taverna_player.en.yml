@@ -57,6 +57,10 @@ en:
         finished:       "Finished"
         actions:        "Actions"
         no_runs_found:  "No workflow runs found"
+        last:           "Last"
+        first:          "First"
+        next:           "Next"
+        previous:       "Previous"
       table_body:
         ago:              "ago"
         cancel_run:       "Cancel"
