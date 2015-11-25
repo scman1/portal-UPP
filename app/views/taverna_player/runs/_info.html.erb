@@ -24,7 +24,7 @@
     </p>
     <p>
       <b><%= t(".category") %>:</b>
-      <%= workflow.category.name %>
+      <%= link_to workflow.category.name, main_app.workflows_path(:category_id => workflow.category) -%>
     </p>
     <p>
       <b><%= t(".state") %>:</b>
