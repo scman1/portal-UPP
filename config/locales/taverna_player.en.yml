@@ -48,6 +48,11 @@ en:
         t_ago:          "%{how_long} ago"
         cancel_run:     "Cancel"
         delete_run:     "Delete"
+        rs_cancelled:   "Cancelled"
+        rs_finished:    "Finished"
+        rs_failed:      "Failed"
+        rs_pending:     "Pending"
+        rs_running:     "Running"
       table:
         run:            "Run"
         user:           "User"

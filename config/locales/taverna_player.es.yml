@@ -36,6 +36,11 @@ es:
         t_ago:          "Hace %{how_long}"
         cancel_run:     "cancelar"
         delete_run:     "borrar"
+        rs_cancelled:   "Cancelado"
+        rs_finished:    "Terminado"
+        rs_failed:      "Fallo"
+        rs_pending:     "En cola"
+        rs_running:     "En ejecución"
       table:
         run:            "Ejecución"
         user:           "Usuario"
