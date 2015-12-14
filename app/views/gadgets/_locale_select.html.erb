@@ -1,0 +1,13 @@
+<% unless logged_in_and_registered? -%>
+<div class="sysmo_gadget">
+  <div >
+    <%= t('.switch_to') %>
+    <% if I18n.locale.to_s == "en" %>
+      <%= link_to "Español", params.merge({:locale => :es}) %> 
+    <% else %>
+      <%= link_to "English", params.merge({:locale => :en}) %>
+    <% end %>
+  </div>
+</div>
+<% end -%>
+

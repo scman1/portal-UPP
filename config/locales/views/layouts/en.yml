@@ -1,4 +1,7 @@
 en:
+  gadgets:
+    locale_select:
+      switch_to:   "Cambiar a:"
   layouts:
     biovel:
       title:     "Biotecnology Virtual Laboratory UPP"
@@ -16,3 +19,4 @@ en:
       funding_1: "is sponsored by Universidad Politécnica de Puebla and CONACYT under the postgraduate strengthening programme 2015"
       funding_2: "This portal uses/adapts software developed as part of European projects: "
       and_c: ", and "
+      

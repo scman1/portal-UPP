@@ -1,4 +1,7 @@
 es:
+  gadgets:
+    locale_select:
+      switch_to:   "Switch to:"
   layouts:
     biovel:
       title:     "Laboratorio Virtual de Biotecnología de la UPP"
