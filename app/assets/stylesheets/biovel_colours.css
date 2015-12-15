@@ -24,6 +24,13 @@ body, #container {
   box-shadow:  0 3px 5px #918e5b;
 }
 
+div.locale_select{
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 3px solid #73AD21;
+}
+
 .workflow {
   background-color: #ffc;
   border-color: #918e5b;

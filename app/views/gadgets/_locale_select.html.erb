@@ -1,13 +1,16 @@
 <% unless logged_in_and_registered? -%>
-<div class="sysmo_gadget">
-  <div >
+<div class="locale_select">
     <%= t('.switch_to') %>
+    
     <% if I18n.locale.to_s == "en" %>
       <%= link_to "Español", params.merge({:locale => :es}) %> 
-    <% else %>
+      <%= image_tag 'famfamfam_flags/es.png' %>
+      <%= image_tag 'famfamfam_flags/mx.png' %>
+    <% elsif I18n.locale.to_s == "es"%>
       <%= link_to "English", params.merge({:locale => :en}) %>
+      <%= image_tag 'famfamfam_flags/gb.png' %>
+      <%= image_tag 'famfamfam_flags/us.png' %>
     <% end %>
-  </div>
 </div>
 <% end -%>
 
