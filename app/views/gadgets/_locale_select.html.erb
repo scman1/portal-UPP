@@ -6,10 +6,12 @@
       <%= link_to "Español", params.merge({:locale => :es}) %> 
       <%= image_tag 'famfamfam_flags/es.png' %>
       <%= image_tag 'famfamfam_flags/mx.png' %>
+      <% logger.info "USING  #{Time.now} (#{$$}) switching language to spanish" %>
     <% elsif I18n.locale.to_s == "es"%>
       <%= link_to "English", params.merge({:locale => :en}) %>
       <%= image_tag 'famfamfam_flags/gb.png' %>
       <%= image_tag 'famfamfam_flags/us.png' %>
+      <% logger.info "USING  #{Time.now} (#{$$}) switching language to english" %>
     <% end %>
 </div>
 <% end -%>
