@@ -1,5 +1,8 @@
 SEEK::Application.routes.draw do
 
+  resources :track_uses
+
+
   mount TavernaPlayer::Engine, :at => "/"
 
   scope '(:locale)' do

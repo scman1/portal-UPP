@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Message:</b>
+  <%= @track_use.message %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @track_use.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_track_use_path(@track_use) %> |
+<%= link_to 'Back', track_uses_path %>

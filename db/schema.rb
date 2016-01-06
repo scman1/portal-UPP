@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151111181406) do
+ActiveRecord::Schema.define(:version => 20160106012300) do
 
   create_table "activity_logs", :force => true do |t|
     t.string   "action"
@@ -1682,6 +1682,13 @@ ActiveRecord::Schema.define(:version => 20151111181406) do
   add_index "topics", ["forum_id", "replied_at"], :name => "index_topics_on_forum_id_and_replied_at"
   add_index "topics", ["forum_id", "sticky", "replied_at"], :name => "index_topics_on_sticky_and_replied_at"
   add_index "topics", ["forum_id"], :name => "index_topics_on_forum_id"
+
+  create_table "track_uses", :force => true do |t|
+    t.string   "message"
+    t.integer  "user"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "trash_records", :force => true do |t|
     t.string   "trashable_type"

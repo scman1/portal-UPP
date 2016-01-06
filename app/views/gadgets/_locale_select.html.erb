@@ -1,18 +1,18 @@
 <% unless logged_in_and_registered? -%>
-<div class="locale_select">
-    <%= t('.switch_to') %>
-    
+<div class="locale_select" style="background: #73AD21;width:100px;border-radius: 0px 0px 10px 10px;padding-left: 5px;padding-right: 5px;padding-top: 1px;padding-bottom: 1px;" >
     <% if I18n.locale.to_s == "en" %>
       <%= link_to "Español", params.merge({:locale => :es}) %> 
       <%= image_tag 'famfamfam_flags/es.png' %>
       <%= image_tag 'famfamfam_flags/mx.png' %>
-      <% logger.info "USING  #{Time.now} (#{$$}) switching language to spanish" %>
+      <% str_msg =  "#{Time.now} (#{$$}) switching language to spanish"%> 
     <% elsif I18n.locale.to_s == "es"%>
       <%= link_to "English", params.merge({:locale => :en}) %>
       <%= image_tag 'famfamfam_flags/gb.png' %>
       <%= image_tag 'famfamfam_flags/us.png' %>
-      <% logger.info "USING  #{Time.now} (#{$$}) switching language to english" %>
+      <% str_msg = "#{Time.now} (#{$$}) switching language to english" %>
     <% end %>
+      <% logger.info str_msg %>
+      <% TrackUse.new(:message => str_msg, :user => 0).save() %>
 </div>
 <% end -%>
 
