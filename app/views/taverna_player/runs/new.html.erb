@@ -1,12 +1,12 @@
 <div class="breadcrumbs">
   <a href="/"><%= t('.home_tag')%></a> &gt;
   <%= link_to @workflow.category.name, main_app.workflows_path(:category_id => @workflow.category) -%> &gt;
-  <%= link_to @workflow_version.title, main_app.workflow_path(@workflow, :version => @workflow_version.version) -%> &gt;
+  <%= link_to @workflow.title, main_app.workflow_path(@workflow, :version => @workflow_version.version) -%> &gt;
   <%= t('.new_tag')%>
 </div>
 
 <div class="contribution_title">
-  <h1><%= t('.new_wfr_tag') + @workflow_version.title -%></h1>
+  <h1><%= t('.new_wfr_tag') + @workflow.title -%></h1>
 </div>
 
 <% if current_user.guest? %>
@@ -32,7 +32,7 @@
 
       <div class="box_about_actor" style="text-align: left; padding: 20px 20px 20px 0px;">
         <%= f.label :name, t('.run_name')  %><br/>
-        <%= f.text_field :name, :value => "#{@workflow_version.title} (v#{@workflow_version.version}) run " + Time.now.utc.strftime('%e %b %Y %H:%M:%S %Z'), :style => 'width: 100%' %>
+        <%= f.text_field :name, :value => "#{@workflow.title} (v#{@workflow_version.version}) run " + Time.now.utc.strftime('%e %b %Y %H:%M:%S %Z'), :style => 'width: 100%' %>
       </div>
 
       <!-- Data inputs -->

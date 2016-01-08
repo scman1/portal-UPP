@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160108065350) do
+ActiveRecord::Schema.define(:version => 20160108074004) do
 
   create_table "activity_logs", :force => true do |t|
     t.string   "action"
@@ -1787,6 +1787,18 @@ ActiveRecord::Schema.define(:version => 20160108065350) do
   add_index "workflow_category_translations", ["locale"], :name => "index_workflow_category_translations_on_locale"
   add_index "workflow_category_translations", ["workflow_category_id"], :name => "index_workflow_category_translations_on_workflow_category_id"
 
+  create_table "workflow_input_port_translations", :force => true do |t|
+    t.integer  "workflow_input_port_id"
+    t.string   "locale",                 :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.string   "name"
+    t.text     "description"
+  end
+
+  add_index "workflow_input_port_translations", ["locale"], :name => "index_workflow_input_port_translations_on_locale"
+  add_index "workflow_input_port_translations", ["workflow_input_port_id"], :name => "index_5df54163aeec8a5eecd55f06394b9481bac3d758"
+
   create_table "workflow_input_port_types", :force => true do |t|
     t.string "name"
   end
@@ -1801,6 +1813,18 @@ ActiveRecord::Schema.define(:version => 20160108065350) do
     t.integer "workflow_version"
     t.string  "mime_type"
   end
+
+  create_table "workflow_output_port_translations", :force => true do |t|
+    t.integer  "workflow_output_port_id"
+    t.string   "locale",                  :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "name"
+    t.text     "description"
+  end
+
+  add_index "workflow_output_port_translations", ["locale"], :name => "index_workflow_output_port_translations_on_locale"
+  add_index "workflow_output_port_translations", ["workflow_output_port_id"], :name => "index_be696f01e98caba41815c849241cd6dccb1c92f5"
 
   create_table "workflow_output_port_types", :force => true do |t|
     t.string "name"

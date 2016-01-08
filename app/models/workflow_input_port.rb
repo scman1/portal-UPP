@@ -5,6 +5,8 @@ class WorkflowInputPort < ActiveRecord::Base
 
   before_save :set_version
 
+  translates :name, :description 
+
   private
 
   def set_version

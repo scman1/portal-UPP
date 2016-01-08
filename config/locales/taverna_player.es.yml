@@ -96,7 +96,7 @@ es:
         home_tag:         "Inicio"
         new_tag:          "Nueva ejecución"
         run_name:         "Nombre de la ejecución:"
-        new_wfr_tag:      "Nueva ejecución del workflow: "
+        new_wfr_tag:      "Nueva ejecución del flujo de trabajo: "
         guest_tag:        "Usuarios no registrados"
         guest_inf1_html:  "Esta iniciando esta ejecución como <strong>Usuario no registrado</strong>. Los resultados de esta ejecución serán visibles para otros usuarios, y serán accessibles solamente por siete días a partir de la fecha en que concluya la ejecución y después sera borrado."
         guest_inf2_html:  "Si desea mantener los resultados por mas tiempo por favor "
