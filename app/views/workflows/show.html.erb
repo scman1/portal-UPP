@@ -3,7 +3,7 @@
 <div class="breadcrumbs">
   <a href="/"><%= t(".home")%></a> &gt;
   <%= link_to @workflow.category.name, main_app.workflows_path(:category_id => @workflow.category) -%> &gt;
-  <%= @display_workflow.title -%>
+  <%= @workflow.title -%>
 </div>
 
 <div class="contribution_title">
@@ -11,7 +11,7 @@
   <% unless project.avatar.nil? %>
     <%= image_tag avatar_url(project, project.avatar_id), :class => 'framed project-avatar' %>
   <% end %>
-  <h1><%= @display_workflow.title  -%></h1>
+  <h1><%= @workflow.title  -%></h1>
 </div>
 
 <ul class="sectionIcons">
@@ -49,7 +49,7 @@
     <% end %>
   </p>
 
-  <%= item_description @display_workflow.description -%>
+  <%= item_description @workflow.description -%>
 
   <% workflow_model = @display_workflow.t2flow %>
   <% processors = workflow_model.all_processors || [] -%>

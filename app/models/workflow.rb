@@ -8,6 +8,7 @@ require 't2flow/dot'
 
 class Workflow < ActiveRecord::Base
 
+
   acts_as_asset
   acts_as_trashable
 
@@ -20,7 +21,7 @@ class Workflow < ActiveRecord::Base
   validates :myexperiment_link, :format => { :with => /^http:\/\/(www\.)?myexperiment\.org\/workflows\/[0-9]+/,
                                              :message => "is invalid, please make sure the URL is in the format: http://www.myexperiment.org/workflows/...",
                                              :allow_blank => true }
-
+  translates :title, :description 
 
   belongs_to :category, :class_name => 'WorkflowCategory'
   has_many :input_ports, :class_name => 'WorkflowInputPort',
