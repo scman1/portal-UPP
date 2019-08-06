@@ -16,7 +16,7 @@ gem "rmagick","2.13.2"
 gem "mysql2"
 gem 'rest-client',">=1.6.1"
 gem 'factory_girl', "2.6.4"
-gem 'rubyzip', "~> 1.1.4"
+gem "rubyzip", ">= 1.2.2"
 gem 'bio'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
