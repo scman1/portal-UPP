@@ -45,7 +45,7 @@ gem 'calendar_date_select', :git => 'https://github.com/paneq/calendar_date_sele
 gem "yaml_db"
 gem 'rails_autolink'
 gem 'rfc-822'
-gem 'nokogiri'
+gem 'nokogiri', ">= 1.10.4"
 gem 'rdf-virtuoso', ">=0.1.6"
 gem 'cocaine'
 gem 'colorize'
