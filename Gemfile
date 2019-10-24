@@ -115,3 +115,5 @@ group :assets do
 end
 
 gem 'globalize', '~> 3.1.0'
+# security fix 24/10/2019
+gem "haml", ">= 5.0.0"
